@@ -1,0 +1,48 @@
+@import '../Templates.scss';
+@import '../Variables.scss';
+
+.description {
+  position: relative;
+  width: 100%;
+  height: 600px;
+  background: url('../../images/photo.jpeg') center/cover;
+  &-item {
+    position: absolute;
+    bottom: -93px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    @include flexSpaceBetween;
+    .item {
+      padding: 18px 34px 32px 34px;
+      @include flexCenterColumn;
+      max-width: 380px;
+      width: 100%;
+      height: 187px;
+      background: $blueLightBg;
+      &-icon {
+        width: 44px;
+        height: 44px;
+        svg {
+          path {
+            stroke: $blueBg;
+          }
+        }
+      }
+      &-title {
+        margin: 14px 0 8px 0;
+        text-align: center;
+        font-size: 22px;
+        line-height: 27px;
+        color: $darkTextBg;
+      }
+      &-text {
+        text-align: center;
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 140%;
+        color: $darkTextBg;
+      }
+    }
+  }
+}

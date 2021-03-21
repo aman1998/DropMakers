@@ -1,0 +1,19 @@
+@import '../Templates.scss';
+@import '../Variables.scss';
+
+.about {
+  &-title {
+    @include title;
+    margin-bottom: 20px;
+  }
+  &-content {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 72px;
+    .text {
+      margin-right: 30px;
+      font-size: 20px;
+      line-height: 140%;
+    }
+  }
+}

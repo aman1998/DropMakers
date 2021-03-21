@@ -1,0 +1,56 @@
+@import '../Templates.scss';
+@import '../Variables.scss';
+
+.contactsForm {
+  margin-bottom: 72px;
+  .title {
+    @include title;
+    margin-bottom: 20px;
+  }
+  .form {
+    max-width: 995px;
+    padding: 0 15px;
+    margin: 0 auto;
+    &-data {
+      display: flex;
+      .data-left, .data-right {
+        display: flex;
+        flex-direction: column;
+        label {
+          font-size: 16px;
+          line-height: 20px;
+        }
+        input {
+          @include input;
+          margin-top: 5px;
+          width: 278px;
+        }
+        .name {
+          margin-bottom: 5px;
+        }
+      }
+      .data-left {
+        margin-right: 30px;
+      }
+      .data-right {
+        width: 100%;
+        label {
+          margin-bottom: 5px;
+          border-radius: 6px;
+        }
+        .massage {
+          padding: 4px 10px;
+          color: $darkTextBg;
+          border-radius: 6px;
+          height: 100%;
+          outline: none;
+        }
+      }
+    }
+    .btn {
+      @include btn2;
+      margin-top: 24px;
+      width: 100%;
+    }
+  }
+}

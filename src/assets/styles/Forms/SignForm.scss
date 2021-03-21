@@ -1,0 +1,237 @@
+@import '../Templates.scss';
+@import '../Variables.scss';
+
+.ant-drawer-body {
+  padding: 0 !important;
+}
+
+// SignIn 
+.signIn {
+  display: flex;
+  &-left {
+    position: relative;
+    padding: 400px 0 0 220px;
+    background: url('../../images/photo6.png') center/cover;
+    max-width: 603px;
+    width: 100%;
+    height: 100vh;
+    .logo {
+      position: absolute;
+      top: 16px;
+      left: 107px;
+      height: 50px;
+      width: 188px;
+    }
+    .title {
+      margin-bottom: 8px;
+      font-size: 24px;
+      line-height: 29px;
+    }
+    .text {
+      margin-bottom: 15px;
+      font-weight: 300;
+      font-size: 20px;
+      line-height: 140%;
+    }
+    .btn {
+      padding: 5px 0;
+      border: 1px solid $blueBg;
+      color: $lightBg;
+      width: 300px;
+      background: inherit;
+      cursor: pointer;
+    }
+  }
+  &-right {
+    @include flexColumn;
+    padding: 160px 0 0 130px;
+    .title {
+      text-align: start;
+      margin-bottom: 32px;
+      width: 380px;
+      font-size: 24px;
+      line-height: 29px;
+    }
+    label {
+      text-align: start;
+      margin-bottom: 5px;
+      width: 380px;
+      font-size: 16px;
+      line-height: 20px;
+      color: rgba(19, 20, 21, 0.8);
+    }
+    .input {
+      @include input;
+      width: 380px;
+      border: 1px solid rgba(0, 0, 0, 0.3);
+    }
+    .username {
+      margin-bottom: 15px;
+    }
+    .password-forgot {
+      display: inline-block;
+      text-align: end;
+      margin: 8px 0 24px 0;
+      font-size: 16px;
+      line-height: 20px;
+      color: $blueBg;
+      cursor: pointer;
+    }
+    .btn {
+      @include btn;
+      height: 40px;
+      border: none;
+      color: $lightBg;
+    }
+  }
+}
+
+// SignUp
+.signUp {
+  display: flex;
+  justify-content: space-between;
+  &-left {
+    position: relative;
+    margin: 0 auto;
+    padding: 15px;
+    max-width: 600px;
+    width: 100%;
+    .logo {
+      position: absolute;
+      left: 5px;
+      height: 50px;
+      width: 188px;
+    }
+    .title-content {
+      margin-top: 60px;
+      @include flexSpaceBetween;
+      .title {
+        font-size: 24px;
+        line-height: 29px;
+      }
+      div {
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 20px;
+      }
+    }
+    .title-descr {
+      margin: 24px 0;
+      padding: 10px 16px;
+      width: 100%;
+      background: $blueLightBg;
+      border-radius: 8px;
+      font-size: 18px;
+      line-height: 22px;
+    }
+    .google {
+      @include flexCenter;
+      margin-bottom: 24px;
+      width: 100%;
+      padding: 10px 0;
+      border: 1px solid rgba(0, 0, 0, 0.3);
+      border-radius: 6px;
+      cursor: pointer;
+      &-icon {
+        height: 24px;
+        width: 24px;
+      }
+      &-text {
+        margin-left: 8px;
+        font-size: 18px;
+        line-height: 22px;
+      }
+    }
+    .line {
+      @include flexSpaceBetween;
+      &-1, &-2 {
+        max-width: 277px;
+        width: 100%;
+        border: 1px solid rgba(0, 0, 0, 0.3);
+      }
+      &-text {
+        margin: 0 24px;
+      }
+    }
+    .form {
+      input {
+        padding: 10px;
+        width: 278px;
+        border: 1px solid rgba(0, 0, 0, 0.3);
+        border-radius: 6px;
+      }
+      .label {
+        margin-bottom: 5px;
+        font-size: 16px;
+        line-height: 20px;
+        color: rgba(19, 20, 21, 0.8);
+      }
+      .fullname {
+        @include flexSpaceBetween;
+        align-items: inherit;
+        margin: 16px 0;
+      }
+      .password {
+        @include flexSpaceBetween;
+        align-items: inherit;
+        margin: 16px 0;
+      }
+      .check-wrapper {
+        display: flex;
+        align-items: center;
+        input {
+          padding: 0;
+          width: auto;
+        } 
+        .check-input {
+          width: 16px;
+          height: 16px;
+          border: 1px solid rgba(0, 0, 0, 0.3);
+          border-radius: 6px;
+        }
+        label {
+          margin-left: 5px;
+          font-size: 16px;
+          line-height: 20px;
+        }
+      }
+      .btn {
+        @include btn;
+        margin-top: 24px;
+        width: 100%;
+        height: 40px;
+        font-size: 20px;
+        line-height: 24px;
+        color: $lightBg;
+        border: none;
+      }
+    }
+  }
+  &-right {
+    position: relative;
+    padding: 424px 0 0 100px;
+    background: url('../../images/photo5.png') center/cover;
+    height: 100vh;
+    max-width: 603px;
+    width: 100%;
+    color: $lightBg;
+    .title {
+      margin-bottom: 8px;
+      font-size: 24px;
+      line-height: 29px;
+    }
+    .text {
+      margin-bottom: 15px;
+      font-weight: 300;
+      font-size: 20px;
+      line-height: 140%;
+    }
+    .btn {
+      padding: 5px 0;
+      border: 1px solid $blueBg;
+      width: 300px;
+      background: inherit;
+      cursor: pointer;
+    }
+  }
+}

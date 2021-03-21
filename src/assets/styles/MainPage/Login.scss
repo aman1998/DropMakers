@@ -1,0 +1,41 @@
+@import '../Templates.scss';
+@import '../Variables.scss';
+
+.login {
+  margin-bottom: 72px;
+  width: 100%;
+  height: 440px;
+  background: url('../../images/photo3.png') center/cover ;
+  color: $lightBg;
+  .container {
+    height: 100%;
+    @include flexCenter;
+    flex-direction: column;
+    .title {
+      margin-bottom: 8px;
+      font-weight: 500;
+      font-size: 36px;
+      line-height: 140%;
+      color: $lightBg;
+    }
+    .btn {
+      @include btn2;
+      margin: 16px 0;
+      width: 278px;
+    }
+    p {
+      font-size: 20px;
+      line-height: 140%;
+    }
+    a {
+      display: inline-block;
+      text-align: center;
+      margin-top: 8px;
+      width: auto;
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 24px;
+      color: $yellowBg;
+    }
+  }
+}

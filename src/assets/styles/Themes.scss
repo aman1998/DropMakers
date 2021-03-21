@@ -1,0 +1,94 @@
+@import './Variables.scss';
+
+// Styles for light theme 
+.page {
+  background: $lightBg;
+  color: $darkTextBg;
+  transition: all 500ms linear;
+  .header {
+    .link {
+      &:hover {
+        color: $blueBg;
+      }
+    }
+    .flags {
+      .flag {
+        border: 1px solid $borderBg;
+      }
+    }
+    .switcher-wrapper {
+      .switcher {
+        background: rgb(150, 149, 149);
+      }
+    }
+  }
+  .steps {
+    &-item {
+      .item {
+        &-number {
+          background: $blueBg;
+          color: $lightBg;
+        }
+      }
+    }
+  }
+  .contactsForm {
+    .form {
+      .btn {
+        background: $blueBg;
+        color: $lightBg;
+      }
+    }
+  }
+}
+
+// Styles from dark theme
+.theme-dark {
+  background: $darkBg;
+  background: rgb(24, 24, 24);
+  // background:  #061325;
+  color: $lightBg;
+  h1, h2 {
+    color: $lightBg;
+  }
+  svg {
+    path {
+      stroke: $yellowBg;
+    }
+  }
+  .header {
+    .link {
+      &:hover {
+        color: $blueLightBg;
+      }
+    }
+    .flags {
+      .flag {
+        border: 1px solid $yellowBg;
+      }
+    }
+    .switcher-wrapper {
+      .switcher {
+        background: $yellowBg;
+      }
+    }
+  }
+  .steps {
+    &-item {
+      .item {
+        &-number {
+          background: $yellowBg;
+          color: $darkTextBg;
+        }
+      }
+    }
+  }
+  .contactsForm {
+    .form {
+      .btn {
+        background: $yellowBg;
+        color: $darkTextBg;
+      }
+    }
+  }
+}

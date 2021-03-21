@@ -1,25 +1,44 @@
-import logo from './logo.svg';
-import './App.css';
+import React, {useEffect} from 'react';
+import {BrowserRouter, Route, Switch} from 'react-router-dom';
+import { useHistory } from "react-router-dom";
+import { useDispatch, useSelector } from 'react-redux';
+import { handleProfileActionCreator } from './store/actions/profile';
 
-function App() {
+import 'antd/dist/antd.css';
+import './assets/styles/styles.scss';
+
+import MainPage from './pages/MainPage';
+
+
+const App = () => {
+  const {isLog} = useSelector(state => ({
+    isLog: state.profile.isLog
+  }))
+
+  let history = useHistory();
+
+  function handleClick() {
+    history.push("/home");
+  }
+
+  const dispatch = useDispatch()
+
+  useEffect(() => {
+    const token = localStorage.getItem('token')
+    if(token) {
+      dispatch(handleProfileActionCreator())
+    }
+  }, [])
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <BrowserRouter>
+      <Switch>
+        <Route path='/' component={MainPage} exact/>
+      </Switch>
+    </BrowserRouter>
+  )
 }
 
-export default App;
+export default App
+
+

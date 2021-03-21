@@ -1,0 +1,75 @@
+@import './Variables.scss';
+@import './Templates.scss';
+
+* {
+    box-sizing: border-box;
+  }
+  html {
+    height: 100%;
+  }
+  body {
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap');
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-size: 16px;
+    font-weight: normal;
+    height: 100%;
+    button {
+      position: relative;
+    }
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    h1, h2, p {
+      margin: 0;
+      color: inherit;
+    }
+    a {
+      text-decoration: none;
+      color: inherit;
+      width: 0;
+      &:hover {
+        color: inherit;
+      }
+    }
+    .container{
+      max-width: 1200px;
+      padding: 0 15px;
+      margin: 0 auto;
+    }
+    position: relative;
+    min-height: 100%;
+    .back-top {
+      @include flexCenter;
+      height: 50px;
+      width: 50px;
+      background: $yellowBg;
+      border-radius: 5px;
+      color: $darkTextBg;
+    }
+    .data-error {
+      color: $errorBg;
+    }
+    .loading {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      border: 1px solid #f3f3f3; 
+      border-top: 1px solid #888282; 
+      border-radius: 50%;
+      width: 10px;
+      height: 10px;
+      animation: spin .7s linear infinite;
+    }
+    
+    @keyframes spin {
+      0% { transform:translate(-50%, -50%)  rotate(0deg) }
+      100% { transform:translate(-50%, -50%)  rotate(360deg)}
+    }
+  }
+  
+  
+  
