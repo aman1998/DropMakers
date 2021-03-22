@@ -1,7 +1,6 @@
 import React, {useState} from 'react';
-import { Switch } from 'antd';
 import { Link } from 'react-scroll';
-import { SignForm, ProfileNav } from '../';
+import { SignForm, ProfileNav, ThemeSwitcher } from '../';
 import { useSelector } from 'react-redux';
 
 import Logo from '../../assets/images/logo.png'
@@ -9,7 +8,7 @@ import Logo from '../../assets/images/logo.png'
 import Ru from '../../assets/icons/RU.png';
 import Usa from '../../assets/icons/US.png';
 
-const Header = ({setTheme, theme}) => {
+const Header = (props) => {
   const [visible, setVisible] = useState(false)
   const [signUp, setSignUp] = useState(true)
 
@@ -25,18 +24,6 @@ const Header = ({setTheme, theme}) => {
     }
   };
 
-  // Switch to dark/light theme
-  const handleTheme = (checked) => {
-   if(checked === true) {
-     localStorage.setItem('theme', 'dark')
-     setTheme('dark')
-   }
-   else {
-     localStorage.removeItem('theme')
-    setTheme('light')
-   }
-  }
-
   return (
     <header className='header'>
       <div className='container'>
@@ -49,9 +36,7 @@ const Header = ({setTheme, theme}) => {
             <li className='item'><Link to='about' className='link' smooth={true} duration={1500}>About Us</Link></li>
             <li className='item' ><Link to='contactsForm' className='link' smooth={true} duration={1500}>Contact Us</Link></li>
           </ul>
-          <div className='switcher-wrapper'>
-            <Switch onChange={handleTheme} className='switcher' defaultChecked={theme === 'dark' ? true : false} />
-          </div>
+          <ThemeSwitcher {...props} />
           <div className='flags'>
             <img src={Usa} alt='flag' className='flag flag-usa'/>
             <img src={Ru} alt='flag' className='flag flag--ru'/>

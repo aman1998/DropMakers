@@ -7,6 +7,9 @@
     border-radius: 8px;
     cursor: pointer;
     transition: all 600ms;
+    &:focus {
+      outline: 0;
+    }
   // &:hover {
   //   background: $blueLightBg;
   // }
@@ -21,6 +24,9 @@
   color: $darkTextBg;
   font-size: 20px;
   line-height: 23px;
+  &:focus {
+    outline: 0;
+  }
 }
 
 @mixin title {

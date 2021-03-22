@@ -20,7 +20,7 @@ const SignIn = ({setSignUp}) => {
   let history = useHistory();
 
   const handleRedirect = () => {
-    history.push('profile');
+    history.push('dashboard');
   }
 
 

@@ -6,14 +6,32 @@
   color: $darkTextBg;
   transition: all 500ms linear;
   .header {
-    .link {
-      &:hover {
-        color: $blueBg;
+    .navigation {
+      .item {
+        a {
+          transition: all 500ms;
+          &:hover {
+            color: $blueBg;
+          }
+        }
+        .active {
+          color: $blueBg;
+        }
       }
-    }
-    .flags {
-      .flag {
-        border: 1px solid $borderBg;
+      .link {
+        &:hover {
+          color: $blueBg;
+        }
+      }
+      .flags {
+        .flag {
+          border: 1px solid $borderBg;
+        }
+      }
+      .sign {
+        .sign-in {
+          border: 1px solid $borderBg;
+        }
       }
     }
     .switcher-wrapper {
@@ -70,6 +88,11 @@
     .switcher-wrapper {
       .switcher {
         background: $yellowBg;
+      }
+    }
+    .sign {
+      .sign-in {
+        border: none;
       }
     }
   }

@@ -30,6 +30,10 @@
     pointer-events: none;
     transition: 0.5s;
     &-item {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      padding: 0 10px;
       height: 35px;
       transition: .5s;
       &:hover {
@@ -37,10 +41,25 @@
       }
     }
     &-item > a {
-      display: flex;
-      justify-content: space-between;
-      font-size: 20px;
+      padding: 0;
+      font-size: 18px;
+      line-height: 22px;
       width: 100%;
+    }
+    .btn {
+      display: block;
+      text-align: left;
+      padding: 0 10px;
+      width: 100%;
+      background: $blueLightBg;
+      border: none;
+      cursor: pointer;
+      &:hover {
+        background: $yellowBg;
+      }
+      &:focus {
+        outline: 0;
+      }
     }
   }
 }

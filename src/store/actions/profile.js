@@ -30,6 +30,22 @@ export const handleProfileActionCreator = () => dispatch => {
     })
 }
 
+
+export const handleLogoutActionCreator = (token, handleRedirect) => dispatch  => {
+	auth.post('/token/logout/', {} ,{
+		headers: {
+			'Authorization': token
+		}
+	})
+		.then(() => {
+			localStorage.removeItem('token')
+			dispatch(getProfile({}))
+      dispatch(checkIsLog(false))
+      handleRedirect()
+		})
+		.catch(e => console.log(e))
+}
+
 export const getProfile = (payload) => ({
   type: GET_PROFILE,
   payload

@@ -1,8 +1,13 @@
 // Template 
 export { default as PageTemplate } from './Template/PageTemplate'
+export { default as PrivatePageTemplate } from './Template/PrivatePageTemplate'
+
+// Switcher 
+export { default as ThemeSwitcher } from './Switcher/ThemeSwitcher'
 
 // Layout
 export { default as Header } from './Layout/Header'
+export { default as PrivateHeader } from './Layout/PrivateHeader'
 export { default as Footer } from './Layout/Footer'
 
 // SVG

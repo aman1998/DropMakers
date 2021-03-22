@@ -14,8 +14,7 @@ const initialState = {
   get: {
     success: false,
     loading: false,
-    failed: false,
-    error: '',
+    failed: false
   }
 }
 
@@ -42,8 +41,7 @@ const reducer = (state = initialState, action) => {
         get: {
           success: false,
           loading: true,
-          failed: false,
-          error: '',
+          failed: false
         },
       }
     case GET_PROFILE_SUCCESS:
@@ -52,8 +50,7 @@ const reducer = (state = initialState, action) => {
         get: {
           success: true,
           loading: false,
-          failed: false,
-          error: '',
+          failed: false
         },
       }
     case GET_PROFILE_FAILED:
@@ -62,8 +59,7 @@ const reducer = (state = initialState, action) => {
         get: {
           success: false,
           loading: false,
-          failed: true,
-          error: '',
+          failed: true
         },
       }
     default: return state
