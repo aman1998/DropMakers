@@ -29,6 +29,7 @@ export { default as SignForm } from './Forms/SignForm/SignForm'
 export { default as ContactsForm } from './Forms/ContactsForm'
 export { default as SignIn } from './Forms/SignForm/SignIn'
 export { default as SignUp } from './Forms/SignForm/SignUp'
+export { default as GoogleSign } from './Forms/SignForm/GoogleSign'
 
 // Profile
 export { default as ProfileNav } from './Profile/Navigation'

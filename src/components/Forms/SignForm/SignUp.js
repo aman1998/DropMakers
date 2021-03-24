@@ -1,12 +1,12 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { handleSignUpActionCreator } from '../../../store/actions/signUp';
+import { GoogleSign } from '../../';
 
 import {Formik, Form, Field, ErrorMessage} from 'formik';
 import * as Yup from 'yup';
 
 import LogoIcon from '../../../assets/images/logo.png';
-import GoogleIcon from '../../../assets/images/google.png';
 
 const SignUp = ({setSignUp}) => {
   const {loading} = useSelector(state => ({
@@ -26,10 +26,7 @@ const SignUp = ({setSignUp}) => {
           <div>* all fields must be filled</div>
         </div>
         <div className='title-descr'>User registration</div>
-        <div className='google'>
-          <img src={GoogleIcon} alt='google' className='google-icon'/>
-          <p className='google-text'>Sign up with Google</p>
-        </div>
+        <GoogleSign />
         <div className='line'>
           <div className='line-1'></div>
           <div className='line-text'>OR</div>

@@ -131,7 +131,11 @@
       padding: 10px 0;
       border: 1px solid rgba(0, 0, 0, 0.3);
       border-radius: 6px;
+      background: inherit;
       cursor: pointer;
+      &:focus {
+        outline: 0;
+      }
       &-icon {
         height: 24px;
         width: 24px;

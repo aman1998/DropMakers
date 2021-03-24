@@ -78,6 +78,7 @@
           line-height: 18px;  
           transition: all 900ms;
           &:hover {
+            // border-color: $yellowBg;
             background: $yellowBg;
             color: $darkTextBg;
           }
