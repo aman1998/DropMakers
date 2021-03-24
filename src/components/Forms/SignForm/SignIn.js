@@ -8,9 +8,9 @@ import Logo from '../../../assets/images/logo.png';
 
 const SignIn = ({setSignUp}) => {
   const {loading} = useSelector(state => ({
-    // success: state.signUp.post.success,
-    loading: state.signUp.post.loading,
-    // failed: state.signUp.post.failed
+    // success: state.signIn.post.success,
+    loading: state.signIn.post.loading,
+    // failed: state.signIn.post.failed
   }))
 
   const [email, setEmail] = useState('')
@@ -59,11 +59,11 @@ const SignIn = ({setSignUp}) => {
           onChange={(e) => setPassword(e.target.value)}
           />
         <div className='password-forgot'>Forgot password?</div>
-        <button className='btn' onClick={handleSignIn}>
         {loading ? 
-          <div className='loading'></div>
-        : 'SIGN IN'}
-        </button>
+          <div className='btn'>
+            <div className='loading'></div>
+          </div>
+        : <button className='btn' onClick={handleSignIn}>SIGN IN</button>}
       </form>
     </section>
   )

@@ -100,11 +100,11 @@ const SignUp = ({setSignUp}) => {
                 <label htmlFor="acceptTerms" className="check">I agree all the Term, Privacy Policy</label>
               </div>
               <ErrorMessage name="acceptTerms" component="div" className='data-error'/>
-              <button type='submit' className='btn'>
-                {loading ? 
-                <div className='loading'></div>
-                : 'SIGN UP'}
-              </button>
+              {loading ? 
+                <div className='btn'>
+                  <div className='loading'></div>
+                </div>
+              : <button className='btn' type='submit'>SIGN UP</button>}
             </Form>
           )}
         </Formik>
