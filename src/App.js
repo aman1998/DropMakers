@@ -7,7 +7,7 @@ import { GET_PROFILE_FAILED } from './store/actionTypes';
 import 'antd/dist/antd.css';
 import './assets/styles/styles.scss';
 
-import { MainPage, DashboardPage } from './routes/routes';
+import { MainPage, DashboardPage, ActivatePage } from './routes/routes';
 import PrivateRoute from './routes/PrivateRoute';
 
 
@@ -29,6 +29,7 @@ const App = () => {
         <PrivateRoute exact path="/dashboard">
           <DashboardPage />
         </PrivateRoute>
+        <Route path="/activation/:uid/:token" component={ActivatePage} exact/>
       </Switch>
     </BrowserRouter>
   )
