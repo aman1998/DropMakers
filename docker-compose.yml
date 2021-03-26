@@ -4,6 +4,6 @@ services:
   nginx:
     build: ./nginx
     ports:
-      - "8920:80"
+      - "80:80"
     volumes:
       - ./build:/app
