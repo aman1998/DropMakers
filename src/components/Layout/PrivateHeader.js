@@ -6,7 +6,7 @@ import Logo from '../../assets/images/logo.png';
 import BellIcon from '../../assets/icons/bell.png';
 import MailIcon from '../../assets/icons/mail.png';
 
-const Header = (props) => {
+const Header = () => {
   return (
     <header className='header'>
       <div className='container'>
@@ -19,7 +19,7 @@ const Header = (props) => {
             <li className='item'><NavLink to='/myorders' className='link' exact>My Orders</NavLink></li>
             <li className='item' ><NavLink to='/reports' className='link' exact>Reports</NavLink></li>
           </ul>
-          <ThemeSwitcher {...props} />
+          <ThemeSwitcher />
           <ul>
             <li className='item'>
               <NavLink to='/dashboard' className='link link-icon' exact>

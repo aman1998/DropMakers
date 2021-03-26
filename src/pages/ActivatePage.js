@@ -1,34 +1,52 @@
 import React, {useEffect} from 'react';
-import { useParams,  useHistory } from 'react-router-dom';
+import { useParams, useHistory, NavLink } from 'react-router-dom';
+import { useSelector, useDispatch } from 'react-redux';
+import { handleActivateActionCreator } from '../store/actions/activate';
 
+import { Footer } from '../components/';
 
-import { auth } from '../axios/axios'
+import Logo from '../assets/images/logo.png';
 
 const ActivatePage = () => {
+  const {loading, success, failed, theme} = useSelector(state => ({
+    success: state.activate.post.success,
+    loading: state.activate.post.loading,
+    failed: state.activate.post.failed,
+    theme: state.themeSwitcher.theme
+  }))
+
   const { uid, token } = useParams()
+  const dispatch = useDispatch()
   let history = useHistory();
 
   const handleRedirect = () => {
     history.push('');
   }
-
-  console.log(uid, token)
   useEffect(() => {
-    auth.post('/users/activation/', {uid, token})
-      .then((res) => {
-        console.log(res)
-        setTimeout(handleRedirect, 3000)
-      })
-      .catch((e) => {
-        console.log('error', e)
-      })
+   dispatch(handleActivateActionCreator(uid, token, handleRedirect))
   }, [])
   
 
   return (
-    <section className='container' style={{paddingTop: '10px'}}>
-      Вы успешно активированы
-    </section>
+    <div className={`page ${theme === 'dark' && 'theme-dark'}`}>
+      <header className='activation-header'>
+        <div className='container'>
+          <NavLink to='/' exact><img src={Logo} className='logo' alt='logo' /></NavLink>
+        </div>
+      </header>
+      <section className='activation-content container'>
+        {
+          loading ? 'loading' :
+          success ? 
+          <>
+            <h1 className='title'>Welcome to <span>DropMakers</span>!</h1>
+            <p className='text'>Thank you, your account has been successfully created</p>
+          </> :
+          failed ? <p className='text'>Something went wrong, please try refreshing the page</p> : null
+        }
+      </section>
+      <Footer />
+    </div>
   )
 }
 

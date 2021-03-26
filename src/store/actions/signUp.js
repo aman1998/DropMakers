@@ -7,7 +7,6 @@ export const handleSignUpActionCreator = ({first_name, last_name, email, passwor
     .then((res) => {
       console.log(res)
       dispatch({type: SIGN_UP_SUCCESS})
-      alert('На почту отправлено ссылка подтверждение')
     })
     .catch((e) => {
       console.log('error', e)

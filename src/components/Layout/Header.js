@@ -8,7 +8,7 @@ import Logo from '../../assets/images/logo.png'
 import Ru from '../../assets/icons/RU.png';
 import Usa from '../../assets/icons/US.png';
 
-const Header = (props) => {
+const Header = () => {
   const [visible, setVisible] = useState(false)
   const [signUp, setSignUp] = useState(true)
 
@@ -36,7 +36,7 @@ const Header = (props) => {
             <li className='item'><Link to='about' className='link' smooth={true} duration={1500}>About Us</Link></li>
             <li className='item' ><Link to='contactsForm' className='link' smooth={true} duration={1500}>Contact Us</Link></li>
           </ul>
-          <ThemeSwitcher {...props} />
+          <ThemeSwitcher />
           <div className='flags'>
             <img src={Usa} alt='flag' className='flag flag-usa'/>
             <img src={Ru} alt='flag' className='flag flag--ru'/>

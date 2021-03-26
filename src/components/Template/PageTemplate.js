@@ -1,15 +1,18 @@
 import React, {useState} from 'react';
+import { useSelector } from 'react-redux';
 // import { BackTop } from 'antd';
 
 import { Header, Footer } from '../index';
 
 // Обертка для всего сайта
 const PageTemplate = (props) => {
-  const [theme, setTheme] = useState(localStorage.getItem('theme') || 'light') 
+  const {theme} = useSelector((state) => ({
+    theme: state.themeSwitcher.theme
+  }))
 
   return (
     <div className={`page ${theme === 'dark' && 'theme-dark'}`}>
-      <Header setTheme={setTheme} theme={theme} />
+      <Header />
       <main>
         {props.children}
         {/* <BackTop>

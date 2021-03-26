@@ -96,6 +96,12 @@
     padding: 15px;
     max-width: 600px;
     width: 100%;
+    .success-text {
+      @include flexCenter;
+      height: 100%;
+      font-size: 24px;
+      line-height: 140%;
+    }
     .logo {
       position: absolute;
       left: 5px;

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { handleSignUpActionCreator } from '../../../store/actions/signUp';
 import { GoogleSign } from '../../';
@@ -9,10 +9,10 @@ import * as Yup from 'yup';
 import LogoIcon from '../../../assets/images/logo.png';
 
 const SignUp = ({setSignUp}) => {
-  const {loading} = useSelector(state => ({
-    // success: state.signUp.post.success,
+  const {loading, success, failed} = useSelector(state => ({
+    success: state.signUp.post.success,
     loading: state.signUp.post.loading,
-    // failed: state.signUp.post.failed
+    failed: state.signUp.post.failed
   }))
   
   const dispatch = useDispatch()
@@ -21,6 +21,8 @@ const SignUp = ({setSignUp}) => {
     <section className='signUp'>
       <div className='signUp-left'>
         <img src={LogoIcon} alt='logo' className='logo'/>
+        { success ? <p className='success-text'>A letter has been sent to your mail. Please confirm your mail</p> :
+        <>
         <div className='title-content'>
           <h1 className='title'>Create an account</h1>
           <div>* all fields must be filled</div>
@@ -104,10 +106,14 @@ const SignUp = ({setSignUp}) => {
                 <div className='btn'>
                   <div className='loading'></div>
                 </div>
-              : <button className='btn' type='submit'>SIGN UP</button>}
+              : failed ? <button className='btn' type='submit'>Repeat</button> :
+              <button className='btn' type='submit'>SIGN UP</button> 
+              }
             </Form>
           )}
-        </Formik>
+        </Formik> 
+        </>
+      }
       </div>
       <div className='signUp-right'>
        <div className='content'>

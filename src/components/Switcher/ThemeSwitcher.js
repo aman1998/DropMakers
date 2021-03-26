@@ -1,16 +1,28 @@
 import React from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+
+import {handleTheme as handleThemeAction} from '../../store/actions/themeSwitcher';
+
+
 import { Switch } from 'antd';
 
-const ThemeSwitcher = ({setTheme, theme}) => {
+const ThemeSwitcher = () => {
+  const {theme} = useSelector((state) => ({
+    theme: state.themeSwitcher.theme
+  }))
+
+  const dispatch = useDispatch()
+  
   // Switch to dark/light theme
   const handleTheme = (checked) => {
     if(checked === true) {
       localStorage.setItem('theme', 'dark')
-      setTheme('dark')
+
+      dispatch(handleThemeAction('dark'))
     }
     else {
       localStorage.removeItem('theme')
-     setTheme('light')
+      dispatch(handleThemeAction('light'))
     }
    }
 

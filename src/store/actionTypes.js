@@ -7,6 +7,10 @@ export const SIGN_UP_SUCCESS = 'SIGN_UP_SUCCESS'
 export const SIGN_UP_FAILED = 'SIGN_UP_FAILED'
 export const SIGN_UP_LOADING = 'SIGN_UP_LOADING'
 
+export const ACTIVATE_SUCCESS = 'ACTIVATE_SUCCESS'
+export const ACTIVATE_FAILED = 'ACTIVATE_FAILED'
+export const ACTIVATE_LOADING = 'ACTIVATE_LOADING'
+
 export const SIGN_IN_SUCCESS = 'SIGN_IN_SUCCESS'
 export const SIGN_IN_FAILED = 'SIGN_IN_FAILED'
 export const SIGN_IN_LOADING = 'SIGN_IN_LOADING'
@@ -17,3 +21,5 @@ export const GET_PROFILE_LOADING = 'GET_PROFILE_LOADING'
 export const GET_TOKEN = 'GET_TOKEN'
 export const GET_PROFILE = 'GET_PROFILE'
 export const IS_LOG = 'IS_LOG'
+
+export const SET_THEME = 'SET_THEME'
