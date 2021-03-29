@@ -3,7 +3,8 @@ import {auth} from '../../axios/axios';
 export const handleGoogleActionCreator = () => dispatch => {
   window.gapi.load('auth2', function() {
     window.gapi.auth2.init({
-      client_id: process.env.REACT_APP_GOOGLE_ID_CLIENT
+      // client_id: process.env.REACT_APP_GOOGLE_ID_CLIENT
+      client_id: '1014024975064-8chcqru11epknmc560k3eooth12b1hp9.apps.googleusercontent.com'
     })
     .then((res) => {
       console.log('success', res)
