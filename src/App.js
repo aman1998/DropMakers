@@ -1,6 +1,6 @@
 import React, {useEffect} from 'react';
 import {BrowserRouter, Route, Switch} from 'react-router-dom';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { handleProfileActionCreator } from './store/actions/profile';
 import { GET_PROFILE_FAILED } from './store/actionTypes';
 
@@ -12,6 +12,9 @@ import PrivateRoute from './routes/PrivateRoute';
 
 
 const App = () => {
+  const {isLog} = useSelector( state => ({
+    isLog: state.profile.isLog
+  }))
   const dispatch = useDispatch()
 
   useEffect(() => {
@@ -20,7 +23,7 @@ const App = () => {
       dispatch(handleProfileActionCreator())
     }
     else dispatch({ type: GET_PROFILE_FAILED })
-  }, [])
+  }, [isLog])
 
   return (
     <BrowserRouter>

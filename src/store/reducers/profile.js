@@ -23,7 +23,7 @@ const reducer = (state = initialState, action) => {
     case GET_TOKEN:
       return {
         ...state,
-        token: localStorage.getItem('token'),
+        token: localStorage.getItem('token') || false,
       }
     case GET_PROFILE:
       return {
