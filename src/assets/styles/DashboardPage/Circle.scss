@@ -1,0 +1,35 @@
+@import '../Templates.scss';
+@import '../Variables.scss';
+
+.circles {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 26px 15px 27px 15px;
+  margin: 0 auto;
+  max-width: 1000px;
+  .item {
+    margin-bottom: 38px;
+    .circle {
+      @include flexCenter;
+      margin-bottom: 10px;
+      width: 175px;
+      height: 175px;
+      border-radius: 50%;
+      color: $darkTextBg;
+    }
+    .yellow {
+      border: 1px solid $yellowBg;
+      background: #FFFEDD;
+    }
+    .blue {
+      border: 1px solid $blueBg;
+      background: $blueLightBg;
+    }
+    p {
+      text-align: center;
+      font-size: 18px;
+      line-height: 140%;
+    }
+  }
+}

@@ -24,6 +24,10 @@ export { default as Requirements } from './MainPage/Requirements'
 export { default as Login } from './MainPage/Login'
 export { default as About } from './MainPage/About'
 
+// Dashboards 
+export { default as Circle } from './Dashboards/Circle'
+export { default as Notifications } from './Dashboards/Notifications'
+
 // Forms 
 export { default as SignForm } from './Forms/SignForm/SignForm'
 export { default as ContactsForm } from './Forms/ContactsForm'
