@@ -1,0 +1,61 @@
+@import '../Variables.scss';
+@import '../Templates.scss';
+
+.product-card {
+  display: flex;
+  padding: 8px 19px 5px 8px;
+  max-width: 582px;
+  width: 100%;
+  background: $blueLightBg;
+  border-radius: 6px;
+  color: $darkTextBg;
+  .image {
+    margin-right: 14px;
+    width: 109px;
+    height: 107px;
+  }
+  .content {
+    .product-title {
+      margin-bottom: 5px;
+      font-size: 16px;
+      line-height: 140%;
+    }
+    .product-info {
+      display: flex;
+      justify-content: space-between;
+      font-size: 16px;
+      line-height: 20px;
+      .info-left {
+        div {
+          margin-bottom: 5px;
+        }
+        span {
+          margin-left: 8px;
+          font-weight: 600;
+        }
+      }
+      .info-right {
+        .info-item {
+          @include flexSpaceBetween;
+          margin-bottom: 5px;
+          .item-title {
+            width: 74px;
+          }
+          .item-count {
+            margin-left: 15px;
+            font-weight: 600;
+          }
+          .anticon, .anticon-star {
+            svg {
+              width: 13px !important;
+              height: 13px !important;
+            }
+          }
+          .ant-rate-star, .ant-rate-star-full {
+            margin-right: 0px !important;
+          }
+        }
+      }
+    }
+  }
+}

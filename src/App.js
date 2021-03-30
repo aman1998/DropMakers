@@ -7,7 +7,7 @@ import { GET_PROFILE_FAILED } from './store/actionTypes';
 import 'antd/dist/antd.css';
 import './assets/styles/styles.scss';
 
-import { MainPage, DashboardPage, ActivatePage } from './routes/routes';
+import { MainPage, DashboardPage, ActivatePage, SearchPage, NotificationsPage, OrdersPage } from './routes/routes';
 import PrivateRoute from './routes/PrivateRoute';
 
 
@@ -25,14 +25,25 @@ const App = () => {
     else dispatch({ type: GET_PROFILE_FAILED })
   }, [isLog])
 
+  const privateRoutes = [
+    {path: '/dashboard', component: <DashboardPage />},
+    {path: '/search', component: <SearchPage />},
+    {path: '/notifications', component: <NotificationsPage />},
+    {path: '/myorders', component: <OrdersPage />},
+  ]
+
   return (
     <BrowserRouter>
       <Switch>
         <Route path='/' component={MainPage} exact/>
-        <PrivateRoute exact path="/dashboard">
-          <DashboardPage />
-        </PrivateRoute>
         <Route path="/activation/:uid/:token" component={ActivatePage} exact/>
+        {
+          privateRoutes.map(route => (
+          <PrivateRoute exact path={route.path} key={route.path}>
+            {route.component}
+          </PrivateRoute>
+          ))
+        }
       </Switch>
     </BrowserRouter>
   )

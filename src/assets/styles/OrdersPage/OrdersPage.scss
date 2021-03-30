@@ -1,0 +1,24 @@
+@import '../Variables.scss';
+@import '../Templates.scss';
+
+.orders {
+  &-header {
+    margin: 16px 0;
+    display: flex;
+    justify-content: space-between;
+    .header-right {
+      .item {
+        display: flex;
+        justify-content: space-between;
+        font-size: 18px;
+        line-height: 22px;
+        &:nth-child(1) {
+          margin-bottom: 11px;
+        }
+        .count {
+          margin-left: 18px;
+        }
+      }
+    }
+  }
+}

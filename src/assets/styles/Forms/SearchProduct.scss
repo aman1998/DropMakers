@@ -1,0 +1,46 @@
+@import '../Variables.scss';
+@import '../Templates.scss';
+
+// Search-Form in SearchPage
+.search-product {
+  @include flexSpaceBetween;
+  align-items: flex-start;
+  padding: 16px;
+  width: 100%;
+  background: $blueLightBg;
+  border-radius: 6px;
+  .dropdown {
+    .active {
+      background: red;
+    }
+  }
+  .select-wrapper {
+    .select {
+      margin-bottom: 16px;
+      background: $lightBg;
+      width: 277px;
+      height: 40px;
+      border-radius: 6px;
+      font-size: 18px;
+      line-height: 22px;
+      .ant-select-selection-item {
+        margin: 3px 0 0 0 ;
+      }
+    }
+    .btn {
+      @include btn;
+      width: 277px;
+      height: 40px;
+    }
+  }
+  .search-input {
+    @include input;
+    max-width: 671px;
+    width: 100%;
+  }
+  .search-title {
+    font-size: 20px;
+    line-height: 24px;
+    color: $darkTextBg;
+  }
+}

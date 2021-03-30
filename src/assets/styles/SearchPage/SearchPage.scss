@@ -1,0 +1,22 @@
+@import '../Variables.scss';
+@import '../Templates.scss';
+
+.search-wrapper {
+  .title {
+    margin: 15px 0;
+    font-size: 30px;
+    line-height: 37px;
+    border-radius: 6px;
+  }
+  .search-result {
+    @include flexSpaceBetween;
+    .item {
+      .result-title {
+        text-align: center;
+        margin: 16px 0;
+        font-size: 30px;
+        line-height: 37px;
+      }
+    }
+  }
+}

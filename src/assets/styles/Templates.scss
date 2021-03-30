@@ -5,6 +5,8 @@
     position: relative;
     background: $blueBg;
     border-radius: 8px;
+    color: $lightBg;
+    border: none;
     cursor: pointer;
     transition: all 600ms;
     &:focus {

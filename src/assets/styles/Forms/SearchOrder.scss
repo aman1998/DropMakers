@@ -1,0 +1,55 @@
+@import '../Variables.scss';
+@import '../Templates.scss';
+
+.search-order {
+  @include flexSpaceBetween;
+  padding: 16px;
+  background: $blueLightBg;
+  border-radius: 6px;
+  .search-left {
+    @include flexSpaceBetween;
+    .div {
+      margin-right: 16px;
+      border-radius: 6px;
+      width: 24px;
+      height: 24px;
+      background: $lightBg;
+    }
+    .date-1 {
+      margin: 0 8px;
+    }
+    .date-1, .date-2{
+      border-radius: 6px;
+      height: 40px;
+      width: 200px;
+    }
+    .select {
+      height: 40px;
+      width: 200px;
+      border-radius: 6px;
+      .ant-select-selector {
+        display: flex;
+        align-items: center;
+        height: 40px;
+        input {
+          height: 40px;
+        }
+      }
+    }
+  }
+  .search-right {
+    @include flexSpaceBetween;
+    .input {
+      @include input;
+      margin-right: 8px;
+    }
+    .number {
+      @include flexCenter;
+      justify-content: center;
+      width: 82px;
+      height: 40px;
+      font-size: 18px;
+      line-height: 22px;
+    }
+  }
+}

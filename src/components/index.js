@@ -28,6 +28,13 @@ export { default as About } from './MainPage/About'
 export { default as Circle } from './Dashboards/Circle'
 export { default as Notifications } from './Dashboards/Notifications'
 
+// Search
+export { default as SearchProduct } from './Forms/SearchProduct'
+export { default as SearchOrder } from './Forms/SearchOrder'
+
+// Card
+export { default as  ProductCard} from './Cards/ProductCard'
+
 // Forms 
 export { default as SignForm } from './Forms/SignForm/SignForm'
 export { default as ContactsForm } from './Forms/ContactsForm'

@@ -11,7 +11,7 @@ const PrivatePageTemplate = (props) => {
   return (
     <div className={`page ${theme === 'dark' && 'theme-dark'}`}>
       <PrivateHeader />
-      <main style={{minHeight: '75vh'}}>
+      <main style={{minHeight: '74vh'}}>
         {props.children}
       </main>
       <Footer />

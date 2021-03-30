@@ -22,7 +22,7 @@ const Header = () => {
           <ThemeSwitcher />
           <ul>
             <li className='item'>
-              <NavLink to='/dashboard' className='link link-icon' exact>
+              <NavLink to='/notifications' className='link link-icon' exact>
                 <img src={BellIcon} alt='bell' className='bell'/>
                 <div className='circle'></div>
               </NavLink>
