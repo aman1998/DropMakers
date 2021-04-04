@@ -1,7 +1,7 @@
 import React from 'react';
 
 import PrivatePageTemplate from '../components/Template/PrivatePageTemplate';
-import { SearchOrder } from '../components/';
+import { SearchOrder, OrderCard } from '../components/';
 
 const OrdersPage = () => {
   return (
@@ -21,6 +21,7 @@ const OrdersPage = () => {
           </div>
         </div>
         <SearchOrder />
+        <OrderCard />
       </section>
     </PrivatePageTemplate>
   )

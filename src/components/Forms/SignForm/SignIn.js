@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { handleSignInActionCreator } from '../../../store/actions/signIn';
 import { useHistory } from "react-router-dom";
+import { ButtonApi } from '../../'
 
 import { Input } from 'antd';
 import Logo from '../../../assets/images/logo.png';
@@ -43,7 +44,7 @@ const SignIn = ({setSignUp}) => {
           <button className='btn' onClick={() => setSignUp(true)}>SIGN UP</button>
         </div>
       </div>
-      <form className='signIn-right'>
+      <form className='signIn-right' onSubmit={handleSignIn}>
         <h1 className='title'>LOG IN</h1>
         <label htmlFor='username'>* Email</label>
         <input 
@@ -59,11 +60,12 @@ const SignIn = ({setSignUp}) => {
           onChange={(e) => setPassword(e.target.value)}
           />
         <div className='password-forgot'>Forgot password?</div>
-        {loading ? 
+        <ButtonApi loading={loading} />
+        {/* {loading ? 
           <div className='btn'>
             <div className='loading'></div>
           </div>
-        : <button className='btn' onClick={handleSignIn}>SIGN IN</button>}
+        : <button className='btn' onClick={handleSignIn}>SIGN IN</button>} */}
       </form>
     </section>
   )

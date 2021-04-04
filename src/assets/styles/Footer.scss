@@ -2,6 +2,7 @@
 @import './Templates.scss';
 
 .footer {
+  margin-top: 16px;
   padding: 16px 0;
   @include flexCenterColumn;
   box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);

@@ -7,7 +7,8 @@ import { GET_PROFILE_FAILED } from './store/actionTypes';
 import 'antd/dist/antd.css';
 import './assets/styles/styles.scss';
 
-import { MainPage, DashboardPage, ActivatePage, SearchPage, NotificationsPage, OrdersPage } from './routes/routes';
+import { MainPage, DashboardPage, ActivatePage, SearchPage, NotificationsPage, OrdersPage,
+          MailPage, } from './routes/routes';
 import PrivateRoute from './routes/PrivateRoute';
 
 
@@ -30,6 +31,12 @@ const App = () => {
     {path: '/search', component: <SearchPage />},
     {path: '/notifications', component: <NotificationsPage />},
     {path: '/myorders', component: <OrdersPage />},
+    {path: '/mail', component: <MailPage />},
+    {path: '/mail/other', component: <MailPage />},
+    {path: '/mail/send', component: <MailPage />},
+    {path: '/mail/replies', component: <MailPage />},
+    {path: '/mail/direct', component: <MailPage />},
+    {path: '/mail/automatic', component: <MailPage />},
   ]
 
   return (

@@ -29,11 +29,14 @@ export { default as Circle } from './Dashboards/Circle'
 export { default as Notifications } from './Dashboards/Notifications'
 
 // Search
-export { default as SearchProduct } from './Forms/SearchProduct'
-export { default as SearchOrder } from './Forms/SearchOrder'
+export { default as SearchProduct } from './Forms/SearchForm/SearchProduct'
+export { default as SearchOrder } from './Forms/SearchForm/SearchOrder'
+export { default as SearchNotifications } from './Forms/SearchForm/SearchNotifications'
+export { default as SearchMail } from './Forms/SearchForm/SearchMail'
 
 // Card
 export { default as  ProductCard} from './Cards/ProductCard'
+export { default as  OrderCard} from './Cards/OrderCard'
 
 // Forms 
 export { default as SignForm } from './Forms/SignForm/SignForm'
@@ -42,5 +45,12 @@ export { default as SignIn } from './Forms/SignForm/SignIn'
 export { default as SignUp } from './Forms/SignForm/SignUp'
 export { default as GoogleSign } from './Forms/SignForm/GoogleSign'
 
+// Buttons
+export { default as ButtonApi } from './Buttons/ButtonApi'
+
 // Profile
 export { default as ProfileNav } from './Profile/Navigation'
+
+// MailPage
+
+export { default as Sidebar } from './Mail/Sidebar'

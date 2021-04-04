@@ -1,0 +1,36 @@
+@import '../Variables.scss';
+@import '../Templates.scss';
+
+.search-notification {
+  @include flexSpaceBetween;
+  padding: 0 16px;
+  margin-bottom: 16px;
+  width: 100%;
+  height: 88px;
+  background: $blueLightBg;
+  color: $darkTextBg;
+  .left {
+    display: flex;
+    align-items: center;
+    .text-1 {
+      font-size: 18px;
+      line-height: 22px;
+    }
+    .text-2 {
+      font-size: 16px;
+      line-height: 19px;
+    }
+    .select {
+      @include select;
+      margin: 0 8px;
+      width: 277px;
+    }
+  }
+  .right {
+    .search-input {
+      @include input;
+      width: 203px;
+      border: none;
+    }
+  }
+}

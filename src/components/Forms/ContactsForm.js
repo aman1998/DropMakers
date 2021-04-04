@@ -44,7 +44,7 @@ const ContactsForm = () => {
           </div>
         </div>
         {error && <p className='data-error'>Fill all data</p>}
-        <input type="submit" value="Send" className='btn'/>
+        <button className='btn' type="submit">Send</button>
       </form>
     </div>
   )

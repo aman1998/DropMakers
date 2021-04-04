@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { handleSignUpActionCreator } from '../../../store/actions/signUp';
 import { GoogleSign } from '../../';
+import { ButtonApi } from '../../';
 
 import {Formik, Form, Field, ErrorMessage} from 'formik';
 import * as Yup from 'yup';
@@ -102,13 +103,9 @@ const SignUp = ({setSignUp}) => {
                 <label htmlFor="acceptTerms" className="check">I agree all the Term, Privacy Policy</label>
               </div>
               <ErrorMessage name="acceptTerms" component="div" className='data-error'/>
-              {loading ? 
-                <div className='btn'>
-                  <div className='loading'></div>
-                </div>
-              : failed ? <button className='btn' type='submit'>Repeat</button> :
-              <button className='btn' type='submit'>SIGN UP</button> 
-              }
+              <ButtonApi 
+                loading={loading}
+              />
             </Form>
           )}
         </Formik> 

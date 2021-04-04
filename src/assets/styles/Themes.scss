@@ -10,17 +10,19 @@
       .item {
         a {
           transition: all 500ms;
-          &:hover {
-            color: $blueBg;
-          }
+          // &:hover {
+          //   color: $blueBg;
+          // }
         }
         .active {
           color: $blueBg;
         }
       }
-      .link {
-        &:hover {
-          color: $blueBg;
+      .item--inventory, .item--order, .item--report {
+        .link {
+          &:hover {
+            color: $darkTextBg;
+          }
         }
       }
       .flags {
@@ -64,7 +66,6 @@
 .theme-dark {
   background: $darkBg;
   background: rgb(24, 24, 24);
-  // background:  #061325;
   color: $lightBg;
   h1, h2 {
     color: $lightBg;
@@ -75,24 +76,28 @@
     }
   }
   .header {
-    .link {
-      &:hover {
-        color: $blueLightBg;
+    .navigation {
+      .item--inventory, .item--order, .item--report {
+        .link {
+          &:hover {
+            color: $lightBg;
+          }
+        }
       }
-    }
-    .flags {
-      .flag {
-        border: 1px solid $yellowBg;
+      .flags {
+        .flag {
+          border: 1px solid $yellowBg;
+        }
+      }
+      .sign {
+        .sign-in {
+          border: none;
+        }
       }
     }
     .switcher-wrapper {
       .switcher {
         background: $yellowBg;
-      }
-    }
-    .sign {
-      .sign-in {
-        border: none;
       }
     }
   }

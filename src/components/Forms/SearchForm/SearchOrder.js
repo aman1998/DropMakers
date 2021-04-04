@@ -1,5 +1,5 @@
 import React from 'react';
-import { Select,  InputNumber, DatePicker, Space } from 'antd';
+import { Select,  InputNumber, DatePicker } from 'antd';
 import moment from 'moment';
 
 const { Option } = Select;

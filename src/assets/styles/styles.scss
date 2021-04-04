@@ -12,22 +12,26 @@
 @import './MainPage/About.scss';
 
 @import './DashboardPage/Circle.scss';
-@import './DashboardPage/Notifications.scss';
 @import './DashboardPage/Dashboard.scss';
+
+@import './NotificationsPage/NotificationsPage.scss';
 
 @import './Forms/ContactForm.scss';
 @import './Forms/SignForm.scss';
 @import './Forms/SearchProduct.scss';
 @import './Forms/SearchOrder.scss';
+@import './Forms/SearchNotifications.scss';
+@import './Forms/SearchMail.scss';
 
 @import './OrdersPage/OrdersPage.scss';
 
 @import './Cards/ProductCard.scss';
+@import './Cards/OrderCard.scss';
 
 @import './SearchPage/SearchPage.scss';
+@import './ActivationPage/Activation.scss';
+@import './MailPage/MailPage.scss';
 
 @import './Profile/Navigation.scss';
-
-@import './ActivationPage/Activation.scss';
 
 @import './Themes.scss';
