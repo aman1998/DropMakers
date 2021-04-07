@@ -1,0 +1,52 @@
+@import '../Templates.scss';
+@import '../Variables.scss';
+
+.settings-form {
+  display: flex;
+  justify-content: space-between;
+  padding: 16px 24px 24px 24px;
+  background: $blueLightBg;
+  .data {
+    width: 100%;
+    &-item {
+      display: flex;
+      align-items: center;
+      &-title {
+        margin-right: 16px;
+        width: 180px;
+        height: 40px;
+        font-size: 16px;
+        line-height: 20px;
+        color: $darkTextBg;
+      }
+      .input {
+        @include input;
+        margin-bottom: 16px;
+        max-width: 720px;
+        width: 100%;
+      }
+      .input-wrapper {
+        display: flex;
+        justify-content: space-between;
+        max-width: 720px;
+        width: 100%;
+        .input {
+          max-width: 356px;
+          width: 50%;
+        }
+      }
+    }
+  }
+  .avatar {
+    width: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &-btn {
+      @include btn;
+      margin-top: 4px;
+      width: 96px;
+      // height: 40px;
+    }
+  }
+}

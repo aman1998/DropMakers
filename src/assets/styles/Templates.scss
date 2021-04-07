@@ -7,6 +7,7 @@
     border-radius: 8px;
     color: $lightBg;
     border: none;
+    height: 40px;
     cursor: pointer;
     transition: all 600ms;
     &:focus {
@@ -45,6 +46,7 @@
   border-radius: 6px;
   color: $darkTextBg;
   outline: none;
+  border: none;
 }
 
 @mixin select {

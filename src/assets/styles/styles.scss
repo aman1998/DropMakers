@@ -22,8 +22,12 @@
 @import './Forms/SearchOrder.scss';
 @import './Forms/SearchNotifications.scss';
 @import './Forms/SearchMail.scss';
+@import './Forms/ProfileSettings.scss';
+@import './Forms/Modal.scss';
+@import './Forms/Buttons.scss';
 
 @import './OrdersPage/OrdersPage.scss';
+@import './OrdersPage/OrdersReturnsPage.scss';
 
 @import './Cards/ProductCard.scss';
 @import './Cards/OrderCard.scss';
@@ -33,5 +37,10 @@
 @import './MailPage/MailPage.scss';
 
 @import './Profile/Navigation.scss';
+@import './Profile/Settings.scss';
+@import './Profile/Payments.scss';
+@import './Profile/Access-Control.scss';
+
+@import './StorePage/StorePage.scss';
 
 @import './Themes.scss';

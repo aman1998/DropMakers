@@ -16,12 +16,24 @@
         }
         .active {
           color: $blueBg;
+          &:hover {
+            color: $blueBg !important;
+          }
         }
       }
       .item--inventory, .item--order, .item--report {
         .link {
           &:hover {
             color: $darkTextBg;
+          }
+        }
+        .dropdown-item {
+          .active {
+            background: $yellowBg;
+            color: $darkTextBg;
+            &:hover {
+              color:$darkTextBg !important;
+            }
           }
         }
       }

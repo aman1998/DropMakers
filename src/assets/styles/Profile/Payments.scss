@@ -1,0 +1,18 @@
+@import '../Variables.scss';
+@import '../Templates.scss';
+
+.payments {
+  @include flexSpaceBetween;
+  .title {
+    font-size: 30px;
+    line-height: 37px;
+  }
+  .right {
+    @include flexSpaceBetween;
+    font-size: 20px;
+    line-height: 24px;
+    .count {
+      margin-left: 16px;
+    }
+  }
+}

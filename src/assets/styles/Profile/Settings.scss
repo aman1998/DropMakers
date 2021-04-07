@@ -1,0 +1,24 @@
+@import '../Variables.scss';
+@import '../Templates.scss';
+
+.profile-settings {
+  &-header {
+    @include flexSpaceBetween;
+    .left {
+      display: flex;
+      .title {
+        font-size: 30px;
+        line-height: 37px;
+      }
+    }
+    .right {
+      @include btn;
+      width: 278px;
+    }
+  }
+  .title-2 {
+    margin: 28px 0 8px 0;
+    font-size: 24px;
+    line-height: 29px;
+  }
+}

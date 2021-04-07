@@ -50,7 +50,6 @@
       .btn {
         @include btn;
         width: 167px;
-        height: 40px;
         &:nth-child(1) {
           margin-bottom: 16px;
         }

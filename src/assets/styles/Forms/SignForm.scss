@@ -79,7 +79,6 @@
     }
     .btn {
       @include btn;
-      height: 40px;
       border: none;
       color: $lightBg;
     }

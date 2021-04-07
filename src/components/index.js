@@ -44,9 +44,11 @@ export { default as ContactsForm } from './Forms/ContactsForm'
 export { default as SignIn } from './Forms/SignForm/SignIn'
 export { default as SignUp } from './Forms/SignForm/SignUp'
 export { default as GoogleSign } from './Forms/SignForm/GoogleSign'
+export { default as ProfileSettings } from './Forms/ProfileSettings'
 
 // Buttons
 export { default as ButtonApi } from './Buttons/ButtonApi'
+export { default as ButtonBackPage } from './Buttons/ButtonBackPage'
 
 // Profile
 export { default as ProfileNav } from './Profile/Navigation'

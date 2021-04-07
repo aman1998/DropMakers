@@ -1,0 +1,8 @@
+@import '../Templates.scss';
+@import '../Variables.scss';
+
+.btn-back {
+  @include btn;
+  margin-right: 16px;
+  width: 72px;
+}

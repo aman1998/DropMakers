@@ -61,11 +61,6 @@ const SignIn = ({setSignUp}) => {
           />
         <div className='password-forgot'>Forgot password?</div>
         <ButtonApi loading={loading} />
-        {/* {loading ? 
-          <div className='btn'>
-            <div className='loading'></div>
-          </div>
-        : <button className='btn' onClick={handleSignIn}>SIGN IN</button>} */}
       </form>
     </section>
   )

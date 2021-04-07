@@ -33,21 +33,20 @@
       display: flex;
       align-items: center;
       justify-content: flex-start;
-      padding: 0 10px;
       height: 35px;
       transition: .5s;
-      &:hover {
-        background: $yellowBg;
-      }
     }
     &-item > a {
-      padding: 0;
-      font-size: 18px;
-      line-height: 22px;
+      padding: 0 10px;
+      font-size: 16px;
+      line-height: 20px;
       width: 100%;
+      &:hover {
+        background: $yellowLightBg;
+      }
     }
     .btn {
-      display: block;
+      display: inline-block;
       text-align: left;
       padding: 0 10px;
       width: 100%;
@@ -55,10 +54,18 @@
       border: none;
       cursor: pointer;
       &:hover {
-        background: $yellowBg;
+        background: $yellowLightBg;
       }
       &:focus {
         outline: 0;
+      }
+    }
+    .active {
+      background: $yellowBg;
+      color: $darkTextBg;
+      &:hover {
+        background: $yellowBg !important;
+        color:$darkTextBg !important;
       }
     }
   }

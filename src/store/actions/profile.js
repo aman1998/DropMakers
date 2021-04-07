@@ -46,9 +46,9 @@ export const handleLogoutActionCreator = (token, handleRedirect) => dispatch  =>
 		.catch(e => console.log(e))
 }
 
-export const getProfile = (payload) => ({
+export const getProfile = (myProfile) => ({
   type: GET_PROFILE,
-  payload
+  myProfile
 })
 
 

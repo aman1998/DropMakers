@@ -8,7 +8,8 @@ import 'antd/dist/antd.css';
 import './assets/styles/styles.scss';
 
 import { MainPage, DashboardPage, ActivatePage, SearchPage, NotificationsPage, OrdersPage,
-          MailPage, } from './routes/routes';
+        MailPage, ProfileSettingsPage, PaymentsPage, AccessControlPage, OrdersReturnsPage,
+        StorePage } from './routes/routes';
 import PrivateRoute from './routes/PrivateRoute';
 
 
@@ -31,12 +32,17 @@ const App = () => {
     {path: '/search', component: <SearchPage />},
     {path: '/notifications', component: <NotificationsPage />},
     {path: '/myorders', component: <OrdersPage />},
+    {path: '/myorders/returns', component: <OrdersReturnsPage />},
     {path: '/mail', component: <MailPage />},
     {path: '/mail/other', component: <MailPage />},
     {path: '/mail/send', component: <MailPage />},
     {path: '/mail/replies', component: <MailPage />},
     {path: '/mail/direct', component: <MailPage />},
     {path: '/mail/automatic', component: <MailPage />},
+    {path: '/settings', component: <ProfileSettingsPage />},
+    {path: '/payments', component: <PaymentsPage />},
+    {path: '/access-control', component: <AccessControlPage />},
+    {path: '/store', component: <StorePage />},
   ]
 
   return (

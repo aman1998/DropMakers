@@ -60,7 +60,7 @@ const Header = () => {
               <NavLink to='/myorders' className='link' exact>My Orders</NavLink>
               <div className='dropdown'>
                 <div className='dropdown-item dropdown-item--1'> 
-                  <NavLink to='/' className='dropdown-item' exact>Orders returns</NavLink>
+                  <NavLink to='/myorders/returns' className='dropdown-item' exact>Orders returns</NavLink>
                 </div>
               </div>
             </li>
@@ -93,7 +93,7 @@ const Header = () => {
                 <div className='circle'></div>
               </NavLink>
             </li>
-            <li className='item'><NavLink to='/mystore' className='link' exact>My Store</NavLink></li>
+            <li className='item'><NavLink to='/store' className='link' exact>My Store</NavLink></li>
           </ul>
           <ProfileNav />
         </nav>

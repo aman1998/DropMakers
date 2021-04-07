@@ -1,0 +1,14 @@
+@import '../Variables.scss';
+@import '../Templates.scss';
+
+.orders-returns {
+  &-header {
+    margin: 0 0 16px 0;
+    display: flex;
+    justify-content: space-between;
+    .btn {
+      @include btn;
+      width: 175px;
+    }
+  }
+}

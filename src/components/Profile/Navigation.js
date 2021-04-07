@@ -23,15 +23,17 @@ const Navigation = () => {
       <NavLink to='/dashboard' className='link-wrapper' exact><img src={UserIcon} alt='user' className='link'/></NavLink>
       <div className='dropdown'>
         <div className='dropdown-item dropdown-item--1'> 
-          <NavLink to='/about' className='dropdown-item' exact>Account Settings</NavLink>
+          <NavLink to='/settings' className='dropdown-item' exact>Account Settings</NavLink>
         </div>
         <div className='dropdown-item'> 
-          <NavLink to='/profile' className='dropdown-item' exact>My Payment</NavLink>
+          <NavLink to='/payments' className='dropdown-item' exact>My Payment</NavLink>
         </div>
         <div className='dropdown-item'> 
-          <NavLink to='/profile' className='dropdown-item' exact>Access Control</NavLink>
+          <NavLink to='/access-control' className='dropdown-item' exact>Access Control</NavLink>
         </div>
-        <button onClick={handleLogout} className='dropdown-item btn'>Logout</button>
+        <div className='dropdown-item'> 
+          <button onClick={handleLogout} className='dropdown-item btn'>Logout</button>
+        </div>
       </div>
     </nav>
   )
