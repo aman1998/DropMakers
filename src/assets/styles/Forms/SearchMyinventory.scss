@@ -1,13 +1,16 @@
 @import '../Variables.scss';
 @import '../Templates.scss';
 
-.search-order {
+.search-myinventory {
   @include flexSpaceBetween;
+  margin: 16px 0 10px 0;
   padding: 16px;
   background: $blueLightBg;
   border-radius: 6px;
-  .search-left {
-    @include flexSpaceBetween;
+  color: $darkTextBg;
+  &-left {
+    display: flex;
+    align-items: center;
     .div {
       margin-right: 16px;
       border-radius: 6px;
@@ -15,23 +18,29 @@
       height: 24px;
       background: $lightBg;
     }
-    .date-1 {
-      margin: 0 8px;
-    }
-    .date-1, .date-2{
-      border-radius: 6px;
-      height: 40px;
-      width: 200px;
-    }
     .select {
       @include select;
+      margin-right: 8px;
     }
-  }
-  .search-right {
-    @include flexSpaceBetween;
-    .input {
+    .search-input {
       @include input;
       margin-right: 8px;
+    }
+    .text {
+      font-size: 18px;
+      line-height: 22px;
+    }
+  }
+  &-right {
+    display: flex;
+    align-items: center;
+    .select {
+      @include select;
+      margin: 0 8px;
+    }
+    .text {
+      font-size: 18px;
+      line-height: 22px;
     }
     .number {
       @include flexCenter;

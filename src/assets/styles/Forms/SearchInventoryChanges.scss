@@ -1,0 +1,35 @@
+// @import '../Variables.scss';
+// @import '../Templates.scss';
+
+.search-inventory-changes {
+  @include flexSpaceBetween;
+  margin-top: 16px;
+  padding: 16px;
+  background: $blueLightBg;
+  border-radius: 6px;
+  color: $darkTextBg;
+  .left {
+    display: flex;
+    align-items: center;
+    .select {
+      @include select;
+      width: 277px;
+    }
+    .input {
+      @include input;
+      margin: 0 16px;
+      width: 277px;
+    }
+  }
+  .right {
+    display: flex;
+    .btn {
+      @include btn;
+      width: 175px;
+    }
+    .btn--yellow {
+      margin-left: 16px;
+      background: $yellowBg;
+    }
+  }
+}

@@ -11,7 +11,7 @@ const OrderCard = () => {
       </div>
       <div className='order-content'>
         <div className='content-left'>
-          <img src={Photo}  className='image' />
+          <img src={Photo}  className='image' alt='order-image'/>
           <div>
             <div className='item item-1'>
               <div>Quan 2</div>

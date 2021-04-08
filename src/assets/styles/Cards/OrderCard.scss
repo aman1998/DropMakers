@@ -6,6 +6,7 @@
   padding: 16px 10px 16px 16px;
   background: $blueLightBg;
   color: $darkTextBg;
+  border-radius: 6px;
   .order-header {
     @include flexSpaceBetween;
     margin-bottom: 8px;

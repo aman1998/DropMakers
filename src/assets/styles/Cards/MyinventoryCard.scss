@@ -1,0 +1,71 @@
+@import '../Variables.scss';
+@import '../Templates.scss';
+
+.myinventory-card {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 16px;
+  padding: 16px;
+  background: $blueLightBg;
+  color: $darkTextBg;
+  border-radius: 6px;
+  &-left {
+    display: flex;
+    .image {
+      margin-right: 16px;
+      width: 159px;
+      height: 154px;
+    }
+    .content {
+      max-width: 702px;
+      width: 100%;
+      .title {
+        margin-bottom: 10px;
+        font-size: 16px;
+        line-height: 20px;
+      }
+      .info {
+        @include flexSpaceBetween;
+        &-item {
+          &-title {
+            margin-bottom: 5px;
+            font-size: 18px;
+            line-height: 22px;
+          }
+          &-count {
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 20px;
+          }
+        }
+      }
+    }
+  }
+  &-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    .btns {
+      display: flex;
+      button {
+        margin-left: 10px;
+        font-size: 18px;
+        line-height: 22px;
+        background: inherit;
+        border: none;
+        cursor: pointer;
+        &:focus {
+          outline: 0;
+        }
+      }
+      .edit {
+        color: $blueBg;
+      }
+    }
+    .btn {
+      @include btn;
+      margin-top: 8px;
+      width: 167px;
+    }
+  }
+}

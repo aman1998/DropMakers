@@ -96,6 +96,14 @@
           }
         }
       }
+      .item {
+        .active {
+          color: $yellowBg;
+          &:hover {
+            color: $yellowBg !important;
+          }
+        }
+      }
       .flags {
         .flag {
           border: 1px solid $yellowBg;

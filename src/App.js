@@ -9,7 +9,7 @@ import './assets/styles/styles.scss';
 
 import { MainPage, DashboardPage, ActivatePage, SearchPage, NotificationsPage, OrdersPage,
         MailPage, ProfileSettingsPage, PaymentsPage, AccessControlPage, OrdersReturnsPage,
-        StorePage } from './routes/routes';
+        StorePage, InventoryPage, InventorySettingsPage, InventoryChangesPage, ExporteBayPage} from './routes/routes';
 import PrivateRoute from './routes/PrivateRoute';
 
 
@@ -43,6 +43,12 @@ const App = () => {
     {path: '/payments', component: <PaymentsPage />},
     {path: '/access-control', component: <AccessControlPage />},
     {path: '/store', component: <StorePage />},
+    {path: '/myinventory', component: <InventoryPage />},
+    {path: '/myinventory/settings', component: <InventorySettingsPage />},
+    {path: '/myinventory/changes', component: <InventoryChangesPage />},
+    {path: '/myinventory/export/amazon', component: <ExporteBayPage from='Amazon' to='eBay' />},
+    {path: '/myinventory/export/eBay', component: <ExporteBayPage from='eBay' to='Amazon' />},
+    {path: '/myinventory/export/orders', component: <InventoryChangesPage />},
   ]
 
   return (

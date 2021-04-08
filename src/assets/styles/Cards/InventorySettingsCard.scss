@@ -1,0 +1,62 @@
+@import '../Variables.scss';
+@import '../Templates.scss';
+
+.inventorySettings-card {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 24px;
+  padding: 16px;
+  background: $blueLightBg;
+  color: $darkTextBg;
+  .item {
+    font-size: 16px;
+    line-height: 20px;
+    div {
+      margin-bottom: 8px;
+    }
+  }
+  .item--1 {
+    div {
+      &:nth-child(2) {
+        margin-top: 16px;
+        text-align: center;
+        font-size: 24px;
+        line-height: 29px;
+      }
+    }
+  }
+  .item--2 {
+    .first {
+      font-weight: 600;
+    }
+    .last {
+      margin-bottom: 0px;
+    }
+  }
+  .item--3, .item--4 {
+    div {
+      &:nth-child(1) {
+        margin-bottom: 8px;
+        height: 20px;
+      }
+    }
+  }
+  .item--4 {
+    div {
+      display: flex;
+      div {
+        &:nth-child(1) {
+          width: 153px;
+        }
+        &:nth-child(2) {
+          margin-left: 24px;
+          font-weight: 600;
+        }
+      }
+    }
+  }
+  .item--5 {
+    cursor: pointer;
+    font-weight: 600;
+  }
+}

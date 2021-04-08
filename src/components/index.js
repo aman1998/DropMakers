@@ -34,9 +34,11 @@ export { default as SearchOrder } from './Forms/SearchForm/SearchOrder'
 export { default as SearchNotifications } from './Forms/SearchForm/SearchNotifications'
 export { default as SearchMail } from './Forms/SearchForm/SearchMail'
 
-// Card
-export { default as  ProductCard} from './Cards/ProductCard'
-export { default as  OrderCard} from './Cards/OrderCard'
+// Cards
+export { default as  ProductCard } from './Cards/ProductCard'
+export { default as  OrderCard } from './Cards/OrderCard'
+export { default as MyinventoryCard } from './Cards/MyinventoryCard'
+export { default as InventorySettingsCard } from './Cards/InventorySettingsCard'
 
 // Forms 
 export { default as SignForm } from './Forms/SignForm/SignForm'
@@ -45,6 +47,8 @@ export { default as SignIn } from './Forms/SignForm/SignIn'
 export { default as SignUp } from './Forms/SignForm/SignUp'
 export { default as GoogleSign } from './Forms/SignForm/GoogleSign'
 export { default as ProfileSettings } from './Forms/ProfileSettings'
+export { default as SearchMyInventory } from './Forms/SearchForm/SearchMyInventory'
+export { default as SearchInventoryChanges } from './Forms/SearchForm/SearchInventoryChanges'
 
 // Buttons
 export { default as ButtonApi } from './Buttons/ButtonApi'

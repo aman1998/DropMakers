@@ -20,39 +20,43 @@ const Header = () => {
               <NavLink to='/myinventory' className='link' exact>My Inventory</NavLink>
               <div className='dropdown'>
                 <div className='dropdown-item dropdown-item--1'> 
-                  <NavLink to='/' className='dropdown-item' exact>Settings Groups</NavLink>
+                  <NavLink to='/myinventory/settings' className='dropdown-item' exact>Settings Groups</NavLink>
                 </div>
                 <div className='dropdown-item'> 
-                  <NavLink to='/' className='dropdown-item' exact>Inventory Changes</NavLink>
+                  <NavLink to='/myinventory/changes' className='dropdown-item' exact>Inventory Changes</NavLink>
                 </div>
-                <div className='dropdown-item'> 
-                  <NavLink to='/' className='dropdown-item' exact>Inventiry Import</NavLink>
-                </div>
+                {/* <div className='dropdown-item'> 
+                  <NavLink to='/myinventory/import' className='dropdown-item' exact>Inventiry Import</NavLink>
+                </div> */}
                 <div className='dropdown-item item item--export'> 
-                  <NavLink to='/' className='dropdown-item' exact>
+                  <a className='dropdown-item'>
                     <div>Export to Excel</div>
                     <img src={ChevronIcon} alt='chevron' className='chevron'/>
-                  </NavLink>
+                  </a>
+                  {/* <NavLink to='/' className='dropdown-item' exact>
+                    <div>Export to Excel</div>
+                    <img src={ChevronIcon} alt='chevron' className='chevron'/>
+                  </NavLink> */}
                   <div className='dropdown'>
                     <div className='dropdown-item dropdown-item--1'> 
-                      <NavLink to='/' className='dropdown-item' exact>From eBuy</NavLink>
+                      <NavLink to='/myinventory/export/eBay' className='dropdown-item' exact>From eBuy</NavLink>
                     </div>
                     <div className='dropdown-item dropdown-item--1'> 
-                      <NavLink to='/' className='dropdown-item' exact>From Amazon</NavLink>
+                      <NavLink to='/myinventory/export/amazon' className='dropdown-item' exact>From Amazon</NavLink>
                     </div>
                     <div className='dropdown-item dropdown-item--1'> 
-                      <NavLink to='/' className='dropdown-item' exact>From Orders</NavLink>
+                      <NavLink to='/myinventory/export/orders' className='dropdown-item' exact>From Orders</NavLink>
                     </div>
                   </div>
                 </div>
                 <div className='dropdown-item'> 
-                  <NavLink to='/' className='dropdown-item' exact>Brands</NavLink>
+                  <NavLink to='/myinventory/brands' className='dropdown-item' exact>Brands</NavLink>
                 </div>
                 <div className='dropdown-item'> 
-                  <NavLink to='/' className='dropdown-item' exact>Black Lists</NavLink>
+                  <NavLink to='/myinventory/blacklists' className='dropdown-item' exact>Black Lists</NavLink>
                 </div>
                 <div className='dropdown-item'> 
-                  <NavLink to='/' className='dropdown-item' exact>White Lists</NavLink>
+                  <NavLink to='/myinventory/whitelists' className='dropdown-item' exact>White Lists</NavLink>
                 </div>
               </div>
             </li>
