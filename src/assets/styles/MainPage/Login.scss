@@ -12,10 +12,10 @@
     @include flexCenter;
     flex-direction: column;
     .title {
+      @include fs36;
+      line-height: 140%;
       margin-bottom: 8px;
       font-weight: 500;
-      font-size: 36px;
-      line-height: 140%;
       color: $lightBg;
     }
     .btn {
@@ -24,18 +24,21 @@
       width: 278px;
     }
     p {
-      font-size: 20px;
+      @include fs20;
       line-height: 140%;
     }
     a {
+      @include fs20;
       display: inline-block;
       text-align: center;
       margin-top: 8px;
       width: auto;
       font-weight: 600;
-      font-size: 20px;
-      line-height: 24px;
       color: $yellowBg;
+    }
+    .signin {
+      color: $yellowBg;
+      cursor: pointer;
     }
   }
 }

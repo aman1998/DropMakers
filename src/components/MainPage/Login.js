@@ -22,7 +22,7 @@ const Login = () => {
         <p>Our platform will take care of most the stuff for you</p>
         <button onClick={showDrawer} className='btn'>SIGN UP</button>
         <p>Already working with us?</p>
-        <div onClick={showDrawer}>Sign In</div>
+        <div onClick={showDrawer} className='signin'>Sign In</div>
       <SignForm
         signUp={signUp}
         setSignUp={setSignUp}

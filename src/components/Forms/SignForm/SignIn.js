@@ -60,7 +60,7 @@ const SignIn = ({setSignUp}) => {
           onChange={(e) => setPassword(e.target.value)}
           />
         <div className='password-forgot'>Forgot password?</div>
-        <ButtonApi loading={loading} />
+        <ButtonApi loading={loading} title='SIGN IN'/>
       </form>
     </section>
   )

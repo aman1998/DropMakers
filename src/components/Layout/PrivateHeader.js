@@ -25,12 +25,9 @@ const Header = () => {
                 <div className='dropdown-item'> 
                   <NavLink to='/myinventory/changes' className='dropdown-item' exact>Inventory Changes</NavLink>
                 </div>
-                {/* <div className='dropdown-item'> 
-                  <NavLink to='/myinventory/import' className='dropdown-item' exact>Inventiry Import</NavLink>
-                </div> */}
                 <div className='dropdown-item item item--export'> 
                   <a className='dropdown-item'>
-                    <div>Export to Excel</div>
+                    <div>Inventiry Import</div>
                     <img src={ChevronIcon} alt='chevron' className='chevron'/>
                   </a>
                   {/* <NavLink to='/' className='dropdown-item' exact>
@@ -49,6 +46,9 @@ const Header = () => {
                     </div>
                   </div>
                 </div>
+                {/* <div className='dropdown-item'> 
+                  <NavLink to='/myinventory/import' className='dropdown-item' exact>Export to Excel</NavLink>
+                </div> */}
                 <div className='dropdown-item'> 
                   <NavLink to='/myinventory/brands' className='dropdown-item' exact>Brands</NavLink>
                 </div>
@@ -69,7 +69,8 @@ const Header = () => {
               </div>
             </li>
             <li className='item item--report'>
-              <NavLink to='/reports' className='link' exact>Reports</NavLink>
+              <a className='link'>Reports</a>
+              {/* <NavLink to='/reports' className='link' exact>Reports</NavLink> */}
               <div className='dropdown'>
                 <div className='dropdown-item dropdown-item--1'> 
                   <NavLink to='/' className='dropdown-item' exact>Sales</NavLink>

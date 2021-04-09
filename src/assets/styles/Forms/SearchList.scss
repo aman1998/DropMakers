@@ -1,0 +1,67 @@
+@import '../Variables.scss';
+@import '../Templates.scss';
+
+.search-list {
+  padding: 16px;
+  min-height: 307px;
+  background: $blueLightBg;
+  color: $darkTextBg;
+  border-radius: 6px;
+  .safe {
+    margin-left: 120px;
+    font-size: 24px;
+    line-height: 29px;
+  }
+  .form {
+    margin: 16px 0 24px 0;
+    @include flexSpaceBetween;
+    .left {
+      display: flex;
+      align-items: center;
+      div {
+        font-size: 18px;
+        line-height: 22px;
+      }
+      .select {
+        @include select;
+        margin-left: 8px;
+        width: 205px;
+      }
+    }
+    .search-input {
+      @include input;
+      width: 261px;
+    }
+  }
+  .info {
+    display: flex;
+    padding: 0 40px;
+    width: 100%;
+    background: $lightBg;
+    border-radius: 6px;
+    font-size: 18px;
+    line-height: 22px;
+    div {
+      padding: 6px 0;
+    }
+    &-1 {
+      border-right: 1px solid rgba(0, 0, 0, 0.3);
+      width: 278px;
+      padding-right: 124px;
+    }
+    &-2 {
+      margin-left: 8px;
+      width: 234px;
+      border-right: 1px solid rgba(0, 0, 0, 0.3);
+    }
+    &-3 {
+      margin-left: 8px;
+    }
+  }
+  .entries {
+    text-align: center;
+    margin-top: 16px;
+    font-size: 18px;
+    line-height: 22px;
+  }
+}

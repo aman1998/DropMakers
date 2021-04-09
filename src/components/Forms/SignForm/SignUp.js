@@ -105,6 +105,7 @@ const SignUp = ({setSignUp}) => {
               <ErrorMessage name="acceptTerms" component="div" className='data-error'/>
               <ButtonApi 
                 loading={loading}
+                title='SIGN UP'
               />
             </Form>
           )}

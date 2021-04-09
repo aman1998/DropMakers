@@ -10,15 +10,15 @@
   .container {
     .requirements-content {
       .title {
-        padding-top: 32px;
-        font-size: 48px;
+        @include fs48;
         line-height: 140%;
+        padding-top: 32px;
         color: $darkTextBg;
       }
       .text {
-        margin: 20px 0;
-        font-size: 24px;
+        @include fs24;
         line-height: 140%;
+        margin: 20px 0;
       }
       .item {
         display: flex;
@@ -36,15 +36,15 @@
         }
         .right {
           &-title {
+            @include fs20;
+            line-height: 140%;
             margin-bottom: 4px;
             font-weight: 500;
-            font-size: 20px;
-            line-height: 140%;
           }
           &-text {
-            font-weight: 300;
-            font-size: 18px;
+            @include fs18;
             line-height: 140%;
+            font-weight: 300;
           }
         }
       }

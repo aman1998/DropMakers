@@ -1,0 +1,40 @@
+@import '../Templates.scss';
+@import '../Variables.scss';
+
+.export-order {
+  &-header {
+    display: flex;
+    align-items: center;
+    .title {
+      font-size: 30px;
+      line-height: 37px;
+    }
+  }
+  .text {
+    margin-top: 10px;
+    font-size: 18px;
+    line-height: 140%;
+  }
+  .scan {
+    display: flex;
+    align-items: center;
+    margin-top: 16px;
+    padding: 16px;
+    border-radius: 6px;
+    background: $blueLightBg;
+    color: $darkTextBg;
+    div {
+      font-size: 18px;
+      line-height: 22px;
+    }
+    .select {
+      @include select;
+      margin: 0 16px 0 6px;
+      width: 200px;
+    }
+    .btn {
+      @include btn;
+      width: 175px;
+    }
+  }
+}

@@ -20,8 +20,7 @@
         margin-right: 45px;
         .item {
           margin-left: 16px;
-          font-size: 14px;
-          line-height: 17px;
+          @include fs14;
           cursor: pointer;
           .link-icon {
             position: relative;
@@ -74,14 +73,13 @@
           @include btn;
           width: 72px;
           height: 32px;
-          font-size: 15px;
-          line-height: 18px;  
+          @include fs15; 
           transition: all 900ms;
-          &:hover {
-            // border-color: $yellowBg;
-            // background: $yellowBg;
-            // color: $darkTextBg;
-          }
+          // &:hover {
+          //   border-color: $yellowBg;
+          //   background: $yellowBg;
+          //   color: $darkTextBg;
+          // }
         }
         .sign-up {
           margin-left: 4px;
@@ -135,8 +133,7 @@
       }
       &-item > a {
         padding: 0 10px;
-        font-size: 16px;
-        line-height: 20px;
+        @include fs16;
         width: 100%;
         &:hover {
           background: $yellowLightBg;

@@ -12,7 +12,7 @@
     margin-bottom: 72px;
     .text {
       margin-right: 30px;
-      font-size: 20px;
+      @include fs20;
       line-height: 140%;
     }
   }

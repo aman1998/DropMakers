@@ -9,7 +9,8 @@ import './assets/styles/styles.scss';
 
 import { MainPage, DashboardPage, ActivatePage, SearchPage, NotificationsPage, OrdersPage,
         MailPage, ProfileSettingsPage, PaymentsPage, AccessControlPage, OrdersReturnsPage,
-        StorePage, InventoryPage, InventorySettingsPage, InventoryChangesPage, ExporteBayPage} from './routes/routes';
+        StorePage, InventoryPage, InventorySettingsPage, InventoryChangesPage, ExporteBayPage,
+        ExportOrdersPage, InventoryBrandsPage, InventoryListsPage } from './routes/routes';
 import PrivateRoute from './routes/PrivateRoute';
 
 
@@ -48,7 +49,10 @@ const App = () => {
     {path: '/myinventory/changes', component: <InventoryChangesPage />},
     {path: '/myinventory/export/amazon', component: <ExporteBayPage from='Amazon' to='eBay' />},
     {path: '/myinventory/export/eBay', component: <ExporteBayPage from='eBay' to='Amazon' />},
-    {path: '/myinventory/export/orders', component: <InventoryChangesPage />},
+    {path: '/myinventory/export/orders', component: <ExportOrdersPage />},
+    {path: '/myinventory/brands', component: <InventoryBrandsPage />},
+    {path: '/myinventory/whitelists', component: <InventoryListsPage title='White' />},
+    {path: '/myinventory/blacklists', component: <InventoryListsPage title='Black' />},
   ]
 
   return (
