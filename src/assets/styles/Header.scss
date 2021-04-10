@@ -9,13 +9,22 @@
     .logo {
       width: 278px;
       height: 79px;
+      @media screen and (max-width: 1199px) {
+        width: 200px;
+      height: 59px;
+      }
       svg {
         border-radius: 20px;
       }
     }
+    .switcher-wrapper {
+      @media screen and (max-width: 1199px) {
+        display: none;
+      }
+    }
     .navigation {
       @include flexAlignCenter;
-      ul {
+      .ul {
         @include flexAlignCenter;
         margin-right: 45px;
         .item {
@@ -47,6 +56,9 @@
             }
           }
         }
+        @media screen and (max-width: 1199px) {
+          display: none;
+        }
       }
       .flags {
         margin: 0 55px 0 25px;
@@ -66,6 +78,9 @@
         .flag-usa {
           margin-right: 4px;
         }
+        @media screen and (max-width: 1199px) {
+          display: none;
+        }
       }
       .sign {
         @include flexAlignCenter;
@@ -80,6 +95,9 @@
           //   background: $yellowBg;
           //   color: $darkTextBg;
           // }
+          @media screen and (max-width: 1199px) {
+            display: none;
+          }
         }
         .sign-up {
           margin-left: 4px;

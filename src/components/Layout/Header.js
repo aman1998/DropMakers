@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import { Link } from 'react-scroll';
-import { SignForm, ProfileNav, ThemeSwitcher } from '../';
+import { SignForm, ProfileNav, ThemeSwitcher, Burger } from '../';
 import { useSelector } from 'react-redux';
 
 import Logo from '../../assets/images/logo.png'
@@ -29,7 +29,7 @@ const Header = () => {
       <div className='container'>
         <img src={Logo} alt='logo' className='logo' />
         <nav className='navigation'>
-          <ul>
+          <ul className='ul'>
             <li className='item'><Link to='steps' className='link' smooth={true} duration={1500}>Steps</Link></li>
             <li className='item'><Link to='features' className='link' smooth={true} duration={1500}>Features</Link></li>
             <li className='item'><Link to='requirements' className='link' smooth={true} duration={1500}>Requirements</Link></li>
@@ -49,6 +49,12 @@ const Header = () => {
               <div className='sign-up' onClick={() => showDrawer('Sign Up')}>Sign Up</div>
             </div>
           }
+          <Burger 
+            signUp={signUp}
+            setSignUp={setSignUp}
+            setVisible={setVisible}
+            visible={visible}
+          />
         </nav>
       </div>
       <SignForm

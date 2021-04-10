@@ -72,6 +72,11 @@
       }
     }
   }
+  .burger {
+    span {
+      background: $darkBg;
+    }
+  }
 }
 
 // Styles from dark theme
@@ -136,6 +141,16 @@
       .btn {
         background: $yellowBg;
         color: $darkTextBg;
+      }
+    }
+  }
+  .burger {
+    span {
+      background: $lightBg;
+    }
+    &-icon--active {
+      span {
+        background: $darkBg;
       }
     }
   }

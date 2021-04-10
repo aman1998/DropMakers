@@ -3,9 +3,11 @@
 
 .profile-navigation {
   position: relative;
-  font-size: 18px;
-  line-height: 22px;
+  @include fs18;
   color: $darkTextBg;
+  @media screen and (max-width: 1199px) {
+    display: none;
+  }
   &:hover > .dropdown {
     transform: translate(0,0);
     opacity: 1;
@@ -38,8 +40,7 @@
     }
     &-item > a {
       padding: 0 10px;
-      font-size: 16px;
-      line-height: 20px;
+      @include fs16;
       width: 100%;
       &:hover {
         background: $yellowLightBg;

@@ -10,15 +10,13 @@
   .order-header {
     @include flexSpaceBetween;
     margin-bottom: 8px;
-    font-size: 18px;
-    line-height: 22px;
+    @include fs18;
   }
   .order-content {
     width: 100%;
     display: flex;
     justify-content: space-between;
-    font-size: 16px;
-    line-height: 20px;
+    @include fs16;
     .content-left {
       display: flex;
       .image {

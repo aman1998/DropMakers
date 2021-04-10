@@ -4,8 +4,7 @@
 .search-wrapper {
   .title {
     margin: 0 0 16px 0;
-    font-size: 30px;
-    line-height: 37px;
+    @include fs30;
     border-radius: 6px;
   }
   .search-result {
@@ -14,8 +13,7 @@
       .result-title {
         text-align: center;
         margin: 16px 0;
-        font-size: 30px;
-        line-height: 37px;
+        @include fs30;
       }
     }
   }

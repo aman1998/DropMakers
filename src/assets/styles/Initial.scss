@@ -12,7 +12,7 @@
     margin: 0;
     font-family: 'Montserrat', sans-serif;
     font-style: normal;
-    font-size: 16px;
+    @include fs16;
     font-weight: normal;
     height: 100%;
     button {
@@ -71,6 +71,10 @@
       0% { transform:translate(-50%, -50%)  rotate(0deg) }
       100% { transform:translate(-50%, -50%)  rotate(360deg)}
     }
+  }
+
+  .lock {
+    overflow: hidden;
   }
   
   

@@ -1,6 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import { ProfileNav, ThemeSwitcher } from '../';
+import { ProfileNav, ThemeSwitcher, PrivateBurger } from '../';
 
 import Logo from '../../assets/images/logo.png';
 import BellIcon from '../../assets/icons/bell.png';
@@ -13,7 +13,7 @@ const Header = () => {
       <div className='container'>
         <NavLink to='/' exact><img src={Logo} alt='logo' className='logo' /></NavLink>
         <nav className='navigation'>
-          <ul>
+          <ul className='ul'>
             <li className='item'><NavLink to='/dashboard' className='link' exact>Dashboard</NavLink></li>
             <li className='item'><NavLink to='/search' className='link' exact>Search</NavLink></li>
             <li className='item item--inventory'>
@@ -85,7 +85,7 @@ const Header = () => {
               </li>
           </ul>
           <ThemeSwitcher />
-          <ul>
+          <ul className='ul'>
             <li className='item'>
               <NavLink to='/notifications' className='link link-icon' exact>
                 <img src={BellIcon} alt='bell' className='bell'/>
@@ -101,6 +101,7 @@ const Header = () => {
             <li className='item'><NavLink to='/store' className='link' exact>My Store</NavLink></li>
           </ul>
           <ProfileNav />
+          <PrivateBurger />
         </nav>
       </div>
     </header>

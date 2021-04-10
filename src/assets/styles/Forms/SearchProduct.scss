@@ -21,8 +21,7 @@
       width: 277px;
       height: 40px;
       border-radius: 6px;
-      font-size: 18px;
-      line-height: 22px;
+      @include fs18;
       .ant-select-selection-item {
         margin: 3px 0 0 0 ;
       }
@@ -38,8 +37,7 @@
     width: 100%;
   }
   .search-title {
-    font-size: 20px;
-    line-height: 24px;
+    @include fs20;
     color: $darkTextBg;
   }
 }

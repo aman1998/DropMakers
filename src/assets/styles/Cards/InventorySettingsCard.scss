@@ -9,8 +9,7 @@
   background: $blueLightBg;
   color: $darkTextBg;
   .item {
-    font-size: 16px;
-    line-height: 20px;
+    @include fs16;
     div {
       margin-bottom: 8px;
     }
@@ -20,8 +19,7 @@
       &:nth-child(2) {
         margin-top: 16px;
         text-align: center;
-        font-size: 24px;
-        line-height: 29px;
+        @include fs24;
       }
     }
   }

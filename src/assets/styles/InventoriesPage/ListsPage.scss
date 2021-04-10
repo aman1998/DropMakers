@@ -3,11 +3,10 @@
 
 .inventory-lists {
   .title {
-    font-size: 30px;
-    line-height: 37px;
+    @include fs30;
   }
   .text {
-    font-size: 18px;
+    @include fs18;
     line-height: 140%;
     margin-bottom: 8px;
   }

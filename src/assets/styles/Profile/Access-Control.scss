@@ -11,8 +11,7 @@
         width: 72px;
       }
       .title {
-        font-size: 30px;
-        line-height: 37px;
+        @include fs30;
       }
     }
     .right {
@@ -22,7 +21,7 @@
   }
   .text {
     margin-top: 28px;
-    font-size: 16px;
+    @include fs16;
     line-height: 150%;
   }
 }

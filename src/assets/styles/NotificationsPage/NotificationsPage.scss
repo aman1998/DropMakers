@@ -12,8 +12,7 @@
       height: 40px;
     }
     .title {
-      font-size: 30px;
-      line-height: 37px;
+      @include fs30;
     }
   }
 }

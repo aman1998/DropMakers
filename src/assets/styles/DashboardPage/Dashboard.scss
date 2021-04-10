@@ -15,16 +15,16 @@
       margin-bottom: 8px;
       .title {
         color: $darkTextBg;
-        font-size: 22px;
+        @include fs22;
         line-height: 140%;
       }
       .link {
-        font-size: 16px;
+        @include fs16;
         line-height: 140%;
       }
     }
     &-no {
-      font-size: 16px;
+      @include fs16;
       line-height: 140%;
     }
   }

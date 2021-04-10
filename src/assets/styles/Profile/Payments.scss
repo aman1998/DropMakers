@@ -9,8 +9,7 @@
   }
   .right {
     @include flexSpaceBetween;
-    font-size: 20px;
-    line-height: 24px;
+    @include fs20;
     .count {
       margin-left: 16px;
     }

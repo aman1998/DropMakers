@@ -17,14 +17,13 @@
   .content {
     .product-title {
       margin-bottom: 5px;
-      font-size: 16px;
+      @include fs16;
       line-height: 140%;
     }
     .product-info {
       display: flex;
       justify-content: space-between;
-      font-size: 16px;
-      line-height: 20px;
+      @include fs16;
       .info-left {
         div {
           margin-bottom: 5px;

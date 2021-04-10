@@ -60,5 +60,8 @@ export { default as ButtonBackPage } from './Buttons/ButtonBackPage'
 export { default as ProfileNav } from './Profile/Navigation'
 
 // MailPage
-
 export { default as Sidebar } from './Mail/Sidebar'
+
+// Burger
+export { default as Burger } from './Burger/Burger'
+export { default as PrivateBurger } from './Burger/PrivateBurger'

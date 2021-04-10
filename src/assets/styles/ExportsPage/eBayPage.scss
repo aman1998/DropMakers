@@ -7,7 +7,7 @@
     margin-bottom: 10px;
   }
   p {
-    font-size: 18px;
+    @include fs18;
     line-height: 140%;
   }
   .text-1 {

@@ -27,8 +27,7 @@
       margin-right: 8px;
     }
     .text {
-      font-size: 18px;
-      line-height: 22px;
+      @include fs18;
     }
   }
   &-right {
@@ -39,16 +38,14 @@
       margin: 0 8px;
     }
     .text {
-      font-size: 18px;
-      line-height: 22px;
+      @include fs18;
     }
     .number {
       @include flexCenter;
       justify-content: center;
       width: 82px;
       height: 40px;
-      font-size: 18px;
-      line-height: 22px;
+      @include fs18;
     }
   }
 }

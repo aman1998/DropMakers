@@ -12,7 +12,7 @@
   }
   .text {
     margin-top: 10px;
-    font-size: 18px;
+    @include fs18;
     line-height: 140%;
   }
   .scan {
@@ -24,8 +24,7 @@
     background: $blueLightBg;
     color: $darkTextBg;
     div {
-      font-size: 18px;
-      line-height: 22px;
+      @include fs18;
     }
     .select {
       @include select;

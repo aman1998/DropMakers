@@ -15,16 +15,15 @@
   flex-direction: column;
   height: 75vh;
   .title {
+    @include fs48;
     margin-bottom: 10px;
     font-weight: bold;
-    font-size: 48px;
-    line-height: 59px;
     span {
       color: $blueBg;
     }
   }
   .text {
-    font-size: 28px;
+    @include fs28;
     line-height: 140%;
   }
 }

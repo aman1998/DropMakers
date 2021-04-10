@@ -24,13 +24,12 @@
     }
     .title {
       margin-bottom: 8px;
-      font-size: 24px;
-      line-height: 29px;
+      @include fs24;
     }
     .text {
       margin-bottom: 15px;
       font-weight: 300;
-      font-size: 20px;
+      @include fs20;
       line-height: 140%;
     }
     .btn {
@@ -56,8 +55,7 @@
       text-align: start;
       margin-bottom: 5px;
       width: 380px;
-      font-size: 16px;
-      line-height: 20px;
+      @include fs16;
       color: rgba(19, 20, 21, 0.8);
     }
     .input {
@@ -72,8 +70,7 @@
       display: inline-block;
       text-align: end;
       margin: 8px 0 24px 0;
-      font-size: 16px;
-      line-height: 20px;
+      @include fs16;
       color: $blueBg;
       cursor: pointer;
     }

@@ -9,14 +9,12 @@
   border-radius: 6px;
   .title {
     text-align: center;
-    font-size: 24px;
-    line-height: 29px;
+    @include fs24;
   }
   .title-2 {
     text-align: center;
     margin-top: 16px;
-    font-size: 18px;
-    line-height: 22px;
+    @include fs18;
   }
   .inputs {
     @include flexSpaceBetween;

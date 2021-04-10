@@ -10,8 +10,7 @@
       .item {
         display: flex;
         justify-content: space-between;
-        font-size: 18px;
-        line-height: 22px;
+        @include fs18;
         &:nth-child(1) {
           margin-bottom: 11px;
         }
