@@ -24,6 +24,10 @@
         max-width: 720px;
         width: 100%;
       }
+      .select {
+        @include select;
+        margin-bottom: 16px;
+      }
       .input-wrapper {
         display: flex;
         justify-content: space-between;
@@ -34,6 +38,11 @@
           width: 50%;
         }
       }
+    }
+    .btn {
+      @include btn;
+      max-width: 916px;
+      width: 100%;
     }
   }
   .avatar {
@@ -48,4 +57,22 @@
       // height: 40px;
     }
   }
+  .avatar-change {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px !important;
+    height: 35px;
+    border-radius: 10px;
+    margin-top: 5px;
+    margin-right: 5px;
+    cursor: pointer;
+  }
+  .avatar-title {
+    margin-top: 8px;
+    color: $darkTextBg;
+  }
+  input[type="file"] {
+    display: none;
+}
 }

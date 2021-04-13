@@ -117,7 +117,7 @@ const Burger = () => {
               <div className='link-wrapper'><NavLink to='/access-control' className='link' exact>Access Control</NavLink></div>
             </li>
             <li className='private-item'>
-              <a onClick={handleLogout} className='link'>Logout</a>
+              <div className='link'><button onClick={handleLogout} className='link-btn'>Logout</button></div>
             </li>
           </ul>
           <ThemeSwitcher />

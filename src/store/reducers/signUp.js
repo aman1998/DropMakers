@@ -4,7 +4,8 @@ const initialState = {
   post: {
     loading: false,
     success: false,
-    failed: false
+    failed: false, 
+    error: ''
   }
 }
 
@@ -17,6 +18,7 @@ const reducer = (state = initialState, action) => {
           success: false,
           loading: true,
           failed: false,
+          error: ''
         },
       }
     case SIGN_UP_SUCCESS:
@@ -26,6 +28,7 @@ const reducer = (state = initialState, action) => {
           success: true,
           loading: false,
           failed: false,
+          error: ''
         },
       }
     case SIGN_UP_FAILED:
@@ -35,6 +38,7 @@ const reducer = (state = initialState, action) => {
           success: false,
           loading: false,
           failed: true,
+          error: action.error
         },
       }
     default: return state

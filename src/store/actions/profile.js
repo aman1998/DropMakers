@@ -4,7 +4,10 @@ import {
   GET_PROFILE,
   GET_PROFILE_FAILED, 
   GET_PROFILE_LOADING, 
-  GET_PROFILE_SUCCESS
+  GET_PROFILE_SUCCESS,
+  SETTINGS_PROFILE_SUCCESS, 
+  SETTINGS_PROFILE_LOADING, 
+  SETTINGS_PROFILE_FAILED
 } from "../actionTypes"
 
 import {auth} from '../../axios/axios'
@@ -18,6 +21,7 @@ export const handleProfileActionCreator = () => dispatch => {
     }
   })
     .then(({data}) => {
+      console.log(data)
       dispatch(getProfile(data))
       dispatch(checkIsLog(true))
       dispatch({ type: GET_PROFILE_SUCCESS})
@@ -44,6 +48,25 @@ export const handleLogoutActionCreator = (token, handleRedirect) => dispatch  =>
       handleRedirect()
 		})
 		.catch(e => console.log(e))
+}
+
+export const handleChangeProfileActionCreator = (body, myProfile, data) => dispatch => {
+  const token = localStorage.getItem('token')
+  dispatch({ type: SETTINGS_PROFILE_LOADING })
+  auth.patch(`/users/me/`, body, {
+    headers:{
+      'Authorization': token,
+      'Content-Type': 'multipart/form-data'
+    }
+  })
+  .then(() => {
+    dispatch(getProfile({...myProfile, ...data}))
+    dispatch({ type: SETTINGS_PROFILE_SUCCESS })
+  })
+  .catch(e => {
+    dispatch({ type: SETTINGS_PROFILE_FAILED })
+    console.log(e)
+  })
 }
 
 export const getProfile = (myProfile) => ({

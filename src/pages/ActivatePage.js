@@ -24,7 +24,7 @@ const ActivatePage = () => {
   }
   useEffect(() => {
    dispatch(handleActivateActionCreator(uid, token, handleRedirect))
-  }, [])
+  }, [dispatch, uid, token])
   
 
   return (

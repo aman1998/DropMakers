@@ -1,4 +1,4 @@
-import {SIGN_IN_SUCCESS, SIGN_IN_LOADING, SIGN_IN_FAILED} from '../actionTypes'
+import {EBAY_CONNECT_SUCCESS, EBAY_CONNECT_LOADING, EBAY_CONNECT_FAILED} from '../actionTypes'
 
 const initialState = {
   post: {
@@ -10,7 +10,7 @@ const initialState = {
 
 const reducer = (state = initialState, action) => {
   switch (action.type) {
-    case SIGN_IN_LOADING:
+    case EBAY_CONNECT_LOADING:
       return {
         ...state,
         post: {
@@ -19,7 +19,7 @@ const reducer = (state = initialState, action) => {
           failed: false,
         },
       }
-    case SIGN_IN_SUCCESS:
+    case EBAY_CONNECT_SUCCESS:
       return {
         ...state,
         post: {
@@ -28,7 +28,7 @@ const reducer = (state = initialState, action) => {
           failed: false,
         },
       }
-    case SIGN_IN_FAILED:
+    case EBAY_CONNECT_FAILED:
       return {
         ...state,
         post: {

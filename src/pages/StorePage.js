@@ -1,9 +1,21 @@
 import React from 'react';
 
 import PrivatePageTemplate from '../components/Template/PrivatePageTemplate';
-import { ButtonBackPage } from '../components/';
+import { ButtonBackPage, StoreEbay } from '../components/';
+
+import { ebay } from '../axios/axios';
 
 const StorePage = () => {
+
+  const handleEbayConnect = (e) => {
+    ebay.post('/account/begin_create/', {production: false, site_id: 215})
+      .then(({data}) => {
+        window.open(data);
+      })
+      .catch((e) => {
+        console.log('error', e)
+      })
+  }
   return (
     <PrivatePageTemplate>
       <section className='store container'>
@@ -19,10 +31,10 @@ const StorePage = () => {
           </div>
         </div>
         <div className='store-item ebay'>
-          <div className='store-item-title'>eBuy</div>
+          <div className='store-item-title'>eBay</div>
           <div className='store-item-content'>
-            <div className='name'>Joe Doe</div>
-            <button className='btn'>Connect</button>
+            <StoreEbay />
+            <button className='btn' onClick={(e) => handleEbayConnect(e)}>Connect</button>
           </div>
         </div>
         <div className='pay-methods'>

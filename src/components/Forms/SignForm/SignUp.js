@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { handleSignUpActionCreator } from '../../../store/actions/signUp';
 import { GoogleSign } from '../../';
@@ -10,10 +10,11 @@ import * as Yup from 'yup';
 import LogoIcon from '../../../assets/images/logo.png';
 
 const SignUp = ({setSignUp}) => {
-  const {loading, success, failed} = useSelector(state => ({
+  const {loading, success, failed, error} = useSelector(state => ({
     success: state.signUp.post.success,
     loading: state.signUp.post.loading,
-    failed: state.signUp.post.failed
+    failed: state.signUp.post.failed,
+    error: state.signUp.post.error
   }))
   
   const dispatch = useDispatch()
@@ -105,8 +106,10 @@ const SignUp = ({setSignUp}) => {
               <ErrorMessage name="acceptTerms" component="div" className='data-error'/>
               <ButtonApi 
                 loading={loading}
+                failed={failed}
                 title='SIGN UP'
               />
+              {failed && error.email ? <div className='data-error'>this mail is already in use</div> : null}
             </Form>
           )}
         </Formik> 

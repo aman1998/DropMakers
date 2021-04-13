@@ -16,7 +16,7 @@ import PrivateRoute from './routes/PrivateRoute';
 
 const App = () => {
   const {isLog} = useSelector( state => ({
-    isLog: state.profile.isLog
+    isLog: state.profile.isLog,
   }))
   const dispatch = useDispatch()
 
@@ -26,7 +26,7 @@ const App = () => {
       dispatch(handleProfileActionCreator())
     }
     else dispatch({ type: GET_PROFILE_FAILED })
-  }, [isLog])
+  }, [isLog, dispatch])
 
   const privateRoutes = [
     {path: '/dashboard', component: <DashboardPage />},

@@ -1,7 +1,6 @@
 import React, {useEffect} from 'react';
 import { useDispatch } from 'react-redux';
-import {handleGoogleSignOutActionCreator, 
-  handleGoogleActionCreator, handleGoogleSignInActionCreator} from '../../../store/actions/googleAuth'
+import {handleGoogleActionCreator, handleGoogleSignInActionCreator} from '../../../store/actions/googleAuth'
 
 import GoogleIcon from '../../../assets/images/google.png';
 
@@ -11,15 +10,15 @@ const GoogleSign = () => {
 
   useEffect(() => {
     dispatch(handleGoogleActionCreator())
-  }, [])
+  }, [dispatch])
 
   const handleGoogleIn = () => {
     dispatch(handleGoogleSignInActionCreator())
   }
 
-  const handleGoogleOut = () => {
-    dispatch(handleGoogleSignOutActionCreator)
-  }
+  // const handleGoogleOut = () => {
+  //   dispatch(handleGoogleSignOutActionCreator)
+  // }
 
   return (
     <button className='google' onClick={handleGoogleIn}>

@@ -8,10 +8,10 @@ import { Input } from 'antd';
 import Logo from '../../../assets/images/logo.png';
 
 const SignIn = ({setSignUp}) => {
-  const {loading} = useSelector(state => ({
+  const {loading, failed} = useSelector(state => ({
     // success: state.signIn.post.success,
     loading: state.signIn.post.loading,
-    // failed: state.signIn.post.failed
+    failed: state.signIn.post.failed
   }))
 
   const [email, setEmail] = useState('')
@@ -60,7 +60,7 @@ const SignIn = ({setSignUp}) => {
           onChange={(e) => setPassword(e.target.value)}
           />
         <div className='password-forgot'>Forgot password?</div>
-        <ButtonApi loading={loading} title='SIGN IN'/>
+        <ButtonApi loading={loading} title='SIGN IN' failed={failed}/>
       </form>
     </section>
   )

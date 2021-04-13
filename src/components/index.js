@@ -47,7 +47,6 @@ export { default as ContactsForm } from './Forms/ContactsForm'
 export { default as SignIn } from './Forms/SignForm/SignIn'
 export { default as SignUp } from './Forms/SignForm/SignUp'
 export { default as GoogleSign } from './Forms/SignForm/GoogleSign'
-export { default as ProfileSettings } from './Forms/ProfileSettings'
 export { default as SearchMyInventory } from './Forms/SearchForm/SearchMyInventory'
 export { default as SearchInventoryChanges } from './Forms/SearchForm/SearchInventoryChanges'
 export { default as SearchLists } from './Forms/SearchForm/SearchLists'
@@ -58,9 +57,13 @@ export { default as ButtonBackPage } from './Buttons/ButtonBackPage'
 
 // Profile
 export { default as ProfileNav } from './Profile/Navigation'
+export { default as ProfileSettings } from './Profile/ProfileSettings'
 
 // MailPage
 export { default as Sidebar } from './Mail/Sidebar'
+
+// Stores
+export { default as StoreEbay } from './Store/eBay'
 
 // Burger
 export { default as Burger } from './Burger/Burger'

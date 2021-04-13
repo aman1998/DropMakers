@@ -26,10 +26,10 @@ const Header = () => {
                   <NavLink to='/myinventory/changes' className='dropdown-item' exact>Inventory Changes</NavLink>
                 </div>
                 <div className='dropdown-item item item--export'> 
-                  <a className='dropdown-item'>
+                  <div className='dropdown-item'>
                     <div>Inventiry Import</div>
                     <img src={ChevronIcon} alt='chevron' className='chevron'/>
-                  </a>
+                  </div>
                   {/* <NavLink to='/' className='dropdown-item' exact>
                     <div>Export to Excel</div>
                     <img src={ChevronIcon} alt='chevron' className='chevron'/>
@@ -69,7 +69,7 @@ const Header = () => {
               </div>
             </li>
             <li className='item item--report'>
-              <a className='link'>Reports</a>
+              <div className='link'>Reports</div>
               {/* <NavLink to='/reports' className='link' exact>Reports</NavLink> */}
               <div className='dropdown'>
                 <div className='dropdown-item dropdown-item--1'> 

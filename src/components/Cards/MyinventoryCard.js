@@ -6,7 +6,7 @@ const MyinventoryCard = () => {
   return (
     <div className='myinventory-card'>
       <div className='myinventory-card-left'>
-        <img src={Photo} className='image' alt='myinventort-image' />
+        <img src={Photo} className='image' alt='myinventory' />
         <div className='content'>
           <div className='title'>
             Summer My Size Potty, Pink – Realistic Potty Training Toilet Looks and Feels Like an Adult Toilet – Easy to Empty and Clean

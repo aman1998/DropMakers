@@ -124,6 +124,7 @@
       pointer-events: all;
     }
     .link {
+      display: inline;
     width: 35px;
     height: 35px;
     transition: .5s;
@@ -149,7 +150,7 @@
         height: 35px;
         transition: .5s;
       }
-      &-item > a {
+      &-item > .dropdown-item {
         padding: 0 10px;
         @include fs16;
         width: 100%;
