@@ -3,38 +3,42 @@ import { Rate } from 'antd';
 
 import Photo from '../../assets/images/photo4.png';
 
-const ProductCard = () => {
+const ProductCard = ({title, price, avatar, avalible, country, link}) => {
   return (
     <div className='product-card'>
-      <img src={Photo} alt='product' className='image' />
+      <div>
+        <img src={avatar || Photo} alt='product' className='image' />
+        <a className='link' href={link || '/'} target='_blank' rel="noreferrer">more</a>
+      </div>
       <div className='content'>
         <div className='product-title'>
-        Summer My Size Potty, Pink – Realistic Potty Training Toilet Looks and Feels Like an Adult Toilet – Easy to Empty and Clean
+          {title}
+        {/* Summer My Size Potty, Pink – Realistic Potty Training Toilet Looks and Feels Like an Adult Toilet – Easy to Empty and Clean */}
         </div>
         <div className='product-info'>
           <div className='info-left'>
-            <div>Protection <span>unbranded</span></div>
-            <div>22.90$</div>
-            <div>Cost <span>22.90$</span></div>
+            {/* <div>Protection <span>unbranded</span></div> */}
+            <div>{price}$</div>
+            <div>Cost <span>{price}$</span></div>
             <div>Ship <span>0$</span></div>
           </div>
           <div className='info-right'>
             <div className='info-item'>
-              <div className='item-title'>Sold</div>
-              <div className='item-count'>592</div>
+              <div className='item-title'>Country</div>
+              <div className='item-count'>{country}</div>
             </div>
             <div className='info-item'>
               <div className='item-title'>Available</div>
-              <div className='item-count'>132</div>
+              <div className='item-count'>{avalible}</div>
             </div>
             <div className='info-item'>
               <Rate disabled defaultValue={2} />
               <div className='item-count'>2</div>
             </div>
-            <div className='info-item'>
+            {/* <div className='info-item'>
               <div className='item-title'>reviews</div>
               <div className='item-count'>5</div>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

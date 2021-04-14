@@ -4,8 +4,10 @@
 .product-card {
   display: flex;
   padding: 8px 19px 5px 8px;
+  margin-bottom: 16px;
   max-width: 582px;
   width: 100%;
+  width: 582px;
   background: $blueLightBg;
   border-radius: 6px;
   color: $darkTextBg;
@@ -13,6 +15,11 @@
     margin-right: 14px;
     width: 109px;
     height: 107px;
+  }
+  .link {
+    width: 109px;
+    display: flex;
+    justify-content: center;
   }
   .content {
     .product-title {

@@ -9,6 +9,7 @@
   }
   .search-result {
     @include flexSpaceBetween;
+    align-items: flex-start;
     .item {
       .result-title {
         text-align: center;
