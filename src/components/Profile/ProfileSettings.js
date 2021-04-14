@@ -1,6 +1,6 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { handleChangeProfileActionCreator } from '../../store/actions/profile';
+import { handleChangeProfileActionCreator, handleProfileActionCreator } from '../../store/actions/profile';
 import { Select } from 'antd';
 
 import { ButtonApi } from '../';
@@ -15,12 +15,20 @@ const ProfileSttings = () => {
     failed: state.profile.post.failed,
   }))
 
+  const [reload, setReload] = useState(false)
   const [fileName, setFileName] = useState('')
   const [files, setFiles] = useState([])
   const [first_name, setFirstname] = useState('')
   const [last_name, setLastname] = useState('')
   const [phone, setPhone] = useState('')
   const [country, setCountry] = useState(myProfile.country || '')
+
+  useEffect(() => {
+    if(reload) {
+      dispatch(handleProfileActionCreator())
+      setReload(false)
+    }
+  }, [reload])
 
   const dispatch = useDispatch()
 
@@ -42,7 +50,8 @@ const ProfileSttings = () => {
     formData.append('phone', phone || myProfile.phone)
     formData.append('country', country)
 
-    dispatch(handleChangeProfileActionCreator(formData, myProfile, {first_name, last_name, phone, country}))
+    dispatch(handleChangeProfileActionCreator(formData, myProfile, {first_name, last_name, phone, country}, setReload))
+    setFiles([])
   }
 
   const handleFile = (file, name) => {
@@ -114,7 +123,7 @@ const ProfileSttings = () => {
         <ButtonApi title={'Save'} loading={loading} failed={failed} />
      </div>
      <div className='avatar'>
-       <img src={myProfile.picture || UserIcon} className='avatar-icon' alt='user'/>
+       <img src={myProfile.picture ? `http://151.248.121.132:8920${myProfile.picture}` : UserIcon} className='avatar-icon' alt='user'/>
        <label htmlFor='avatar-change' className='mini-title avatar-change'>
           <div className='avatar-btn'>Change</div>
         </label>

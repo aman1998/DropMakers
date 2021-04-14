@@ -50,7 +50,7 @@ export const handleLogoutActionCreator = (token, handleRedirect) => dispatch  =>
 		.catch(e => console.log(e))
 }
 
-export const handleChangeProfileActionCreator = (body, myProfile, data) => dispatch => {
+export const handleChangeProfileActionCreator = (body, myProfile, data, setReload) => dispatch => {
   const token = localStorage.getItem('token')
   dispatch({ type: SETTINGS_PROFILE_LOADING })
   auth.patch(`/users/me/`, body, {
@@ -62,6 +62,7 @@ export const handleChangeProfileActionCreator = (body, myProfile, data) => dispa
   .then(() => {
     dispatch(getProfile({...myProfile, ...data}))
     dispatch({ type: SETTINGS_PROFILE_SUCCESS })
+    setReload(true)
   })
   .catch(e => {
     dispatch({ type: SETTINGS_PROFILE_FAILED })

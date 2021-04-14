@@ -50,6 +50,11 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    &-icon {
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+    }
     &-btn {
       @include btn;
       margin-top: 4px;
