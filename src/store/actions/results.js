@@ -4,7 +4,7 @@ import results from "../reducers/results";
 
 export const handleResultsAcionCreater = (query) => dispatch => {
   dispatch({type: GET_RESULTS_LOADING})
-  ebay.post('/search/search/', {query})
+  ebay.post('/search/', {query})
     .then(data => {
       dispatch(getResults(data.data))
       dispatch({type: GET_RESULTS_SUCCESS})
