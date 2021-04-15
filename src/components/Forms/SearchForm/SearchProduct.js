@@ -21,14 +21,13 @@ const Search = () => {
       <div className='search-title'>Item URL</div>
       <div className='select-wrapper'>
         <Select 
-          defaultValue="lucy" 
+          defaultValue="eBay" 
           bordered={false} 
           dropdownClassName='dropdown' 
           className='select' 
           >
-          <Option value="jack">Jack</Option>
-          <Option value="lucy">Lucy</Option>
-          <Option value="Yiminghe">yiminghe</Option>
+          <Option value="eBay">eBay</Option>
+          <Option value="amazon">Amazon</Option>
         </Select>
         <button className='btn' onClick={(e) => handleSearch(e)}>START SEARCH</button>
       </div>
