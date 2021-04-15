@@ -22,6 +22,7 @@
     justify-content: center;
   }
   .content {
+    width: 100%;
     .product-title {
       margin-bottom: 5px;
       @include fs16;

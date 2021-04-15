@@ -25,7 +25,7 @@ const SearchPage = () => {
           success ? 
           <div className='search-result'>
               <div className='ebay item'>
-                <div className='result-title'>eBuy</div>
+                <div className='result-title'>eBay</div>
                 {
                   results.map(item => (
                     <ProductCard 

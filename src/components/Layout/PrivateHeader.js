@@ -36,7 +36,7 @@ const Header = () => {
                   </NavLink> */}
                   <div className='dropdown'>
                     <div className='dropdown-item dropdown-item--1'> 
-                      <NavLink to='/myinventory/export/eBay' className='dropdown-item' exact>From eBuy</NavLink>
+                      <NavLink to='/myinventory/export/eBay' className='dropdown-item' exact>From eBay</NavLink>
                     </div>
                     <div className='dropdown-item dropdown-item--1'> 
                       <NavLink to='/myinventory/export/amazon' className='dropdown-item' exact>From Amazon</NavLink>

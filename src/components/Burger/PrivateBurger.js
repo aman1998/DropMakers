@@ -69,7 +69,7 @@ const Burger = () => {
                   </a>
                   <div className={`private-dropdown ${dropdown && 'private-dropdown--active'}`}>
                     <div className='private-dropdown-item private-dropdown-item--1'> 
-                      <NavLink to='/myinventory/export/eBay' className='private-dropdown-item' exact>From eBuy</NavLink>
+                      <NavLink to='/myinventory/export/eBay' className='private-dropdown-item' exact>From eBay</NavLink>
                     </div>
                     <div className='private-dropdown-item private-dropdown-item--1'> 
                       <NavLink to='/myinventory/export/amazon' className='private-dropdown-item' exact>From Amazon</NavLink>

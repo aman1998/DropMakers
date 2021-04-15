@@ -13,7 +13,7 @@ const MyinventoryCard = () => {
           </div>
           <div className='info'>
             <div className='info-item'>
-              <div className='info-item-title'>eBuy</div>
+              <div className='info-item-title'>eBay</div>
               <div className='info-item-count'>40$</div>
             </div>
             <div className='info-item'>
