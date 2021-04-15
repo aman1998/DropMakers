@@ -62,10 +62,10 @@ const ProfileSttings = () => {
   return (
     <form className='settings-form' onSubmit={(e) => handleChangeProfile(e)}>
      <div className='data'>
-        <label className='data-item'>
+        {/* <label className='data-item'>
           <div className='data-item-title'>Email</div>
           <input className='input' defaultValue={myProfile.email}/>
-        </label>
+        </label> */}
         <label className='data-item'>
           <div className='data-item-title'>First name/ Last name</div>
           <div className='input-wrapper'>
@@ -123,7 +123,7 @@ const ProfileSttings = () => {
         <ButtonApi title={'Save'} loading={loading} failed={failed} />
      </div>
      <div className='avatar'>
-       <img src={myProfile.picture ? `http://151.248.121.132:8920${myProfile.picture}` : UserIcon} className='avatar-icon' alt='user'/>
+       <img src={myProfile.picture ? `${myProfile.picture}` : UserIcon} className='avatar-icon' alt='user'/>
        <label htmlFor='avatar-change' className='mini-title avatar-change'>
           <div className='avatar-btn'>Change</div>
         </label>
