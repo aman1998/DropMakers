@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { handleChangeProfileActionCreator, handleProfileActionCreator } from '../../store/actions/profile';
-import { Select } from 'antd';
+import { Select, Image } from 'antd';
 
 import { ButtonApi } from '../';
 import UserIcon from '../../assets/images/user.png';
@@ -113,17 +113,19 @@ const ProfileSttings = () => {
           <div className='data-item-title'>Language</div>
           <input className='input' />
         </label> */}
-        <label className='data-item'>
-          <div className='data-item-title'>New password</div>
-          <div className='input-wrapper'>
-            <input className='input' placeholder='new password'/>
-            <input className='input' placeholder='confirm new password'/>
-          </div>
-        </label>
         <ButtonApi title={'Save'} loading={loading} failed={failed} />
      </div>
      <div className='avatar'>
-       <img src={myProfile.picture ? `${myProfile.picture}` : UserIcon} className='avatar-icon' alt='user'/>
+       { myProfile.picture ?
+          <Image
+            width={150}
+            height={150}
+            src={myProfile.picture}
+            className='avatar-icon'
+            alt='user'
+            /> :
+          <img src={UserIcon} className='avatar-icon' alt='user'/> 
+       }
        <label htmlFor='avatar-change' className='mini-title avatar-change'>
           <div className='avatar-btn'>Change</div>
         </label>

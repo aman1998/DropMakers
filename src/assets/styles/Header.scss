@@ -157,6 +157,9 @@
         &:hover {
           background: $yellowLightBg;
         }
+        button {
+          @include fs16;
+        }
       }
     }
   }

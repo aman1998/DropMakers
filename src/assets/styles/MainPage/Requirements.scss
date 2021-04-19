@@ -7,6 +7,11 @@
   background: $blueLightBg;
   height: 447px;
   color: $darkTextBg;
+  @media screen and (max-width: 1199px) {
+    background: url('../../images/photo2.png') center/cover;
+    color: $lightBg;
+    margin: 0 0 40px 0;
+  }
   .container {
     .requirements-content {
       .title {
@@ -14,6 +19,9 @@
         line-height: 140%;
         padding-top: 32px;
         color: $darkTextBg;
+        @media screen and (max-width: 1199px) {
+          color: $lightBg;
+        }
       }
       .text {
         @include fs24;
@@ -55,6 +63,9 @@
       top: 0;
       width: 40%;
       height: 100%;
+      @media screen and (max-width: 1199px) {
+        display: none;
+      }
     }
   }
 }

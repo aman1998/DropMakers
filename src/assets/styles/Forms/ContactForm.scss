@@ -13,6 +13,9 @@
     margin: 0 auto;
     &-data {
       display: flex;
+      @media screen and (max-width: 1199px) {
+        flex-direction: column;
+      }
       .data-left, .data-right {
         display: flex;
         flex-direction: column;
@@ -31,6 +34,24 @@
       }
       .data-left {
         margin-right: 30px;
+        @media screen and (max-width: 1199px) {
+          margin-right: 0;
+          flex-direction: row;
+          &-label {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            input {
+              width: 100%;
+            }
+          }
+          &-label--1 {
+            margin-right: 8px;
+          }
+          &-label--2 {
+            margin-left: 8px;
+          }
+      }
       }
       .data-right {
         width: 100%;
@@ -44,6 +65,9 @@
           border-radius: 6px;
           height: 100%;
           outline: none;
+          @media screen and (max-width: 1199px) {
+            height: 125px;;
+          }
         }
       }
     }

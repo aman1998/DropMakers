@@ -58,6 +58,8 @@ export { default as ButtonBackPage } from './Buttons/ButtonBackPage'
 // Profile
 export { default as ProfileNav } from './Profile/Navigation'
 export { default as ProfileSettings } from './Profile/ProfileSettings'
+export { default as EmailSettings } from './Profile/EmailSettings'
+export { default as PasswordSettings } from './Profile/PasswordSettings'
 
 // MailPage
 export { default as Sidebar } from './Mail/Sidebar'

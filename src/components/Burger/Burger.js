@@ -23,6 +23,8 @@ const Burger = ({setVisible, setSignUp}) => {
 
   const showDrawer = (value) => {
     setVisible(true)
+    document.body.classList.toggle('lock')
+    setBurger(!burger)
     // setBurger(false)
     if(value === 'Sign In') {
       setSignUp(false)

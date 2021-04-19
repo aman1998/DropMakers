@@ -8,6 +8,12 @@ import {
   SETTINGS_PROFILE_SUCCESS, 
   SETTINGS_PROFILE_LOADING, 
   SETTINGS_PROFILE_FAILED,
+  SETTINGS_EMAIL_SUCCESS, 
+  SETTINGS_EMAIL_LOADING, 
+  SETTINGS_EMAIL_FAILED,
+  SETTINGS_PASSWORD_SUCCESS, 
+  SETTINGS_PASSWORD_LOADING, 
+  SETTINGS_PASSWORD_FAILED,
 } from "../actionTypes";
 
 const initialState = {
@@ -20,6 +26,16 @@ const initialState = {
     failed: false
   },
   post: {
+    success: false,
+    loading: false,
+    failed: false
+  },
+  patchEmail: {
+    success: false,
+    loading: false,
+    failed: false
+  },
+  patchPassword: {
     success: false,
     loading: false,
     failed: false
@@ -92,6 +108,60 @@ const reducer = (state = initialState, action) => {
       return {
         ...state,
         post: {
+          success: false,
+          loading: false,
+          failed: true
+        },
+      }
+    case SETTINGS_EMAIL_LOADING:
+      return {
+        ...state,
+        patchEmail: {
+          success: false,
+          loading: true,
+          failed: false
+        },
+      }
+    case SETTINGS_EMAIL_SUCCESS:
+      return {
+        ...state,
+        patchEmail: {
+          success: true,
+          loading: false,
+          failed: false
+        },
+      }
+    case SETTINGS_EMAIL_FAILED:
+      return {
+        ...state,
+        patchEmail: {
+          success: false,
+          loading: false,
+          failed: true
+        },
+      }
+    case SETTINGS_PASSWORD_LOADING:
+      return {
+        ...state,
+        patchPassword: {
+          success: false,
+          loading: true,
+          failed: false
+        },
+      }
+    case SETTINGS_PASSWORD_SUCCESS:
+      return {
+        ...state,
+        patchPassword: {
+          success: true,
+          loading: false,
+          failed: false
+        },
+      }
+    case SETTINGS_PASSWORD_FAILED:
+      return {
+        ...state,
+        patchPassword: {
           success: false,
           loading: false,
           failed: true

@@ -159,11 +159,16 @@
           @include flexSpaceBetween;
           position: relative;
           width: 100%;
-          .chevron {
+          .chevron-wrapper {
             position: absolute;
-            right: 10px;
+            right: 5px;
+            @include flexCenter;
+            width: 30px;
+            height: 20px;
             cursor: pointer;
-            transform: rotate(90deg);
+            .chevron {
+              transform: rotate(90deg);
+            }
           }
         }
         .link {

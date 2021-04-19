@@ -21,8 +21,8 @@ const SignUp = ({setSignUp}) => {
 
   return (
     <section className='signUp'>
+      <img src={LogoIcon} alt='logo' className='logo'/>
       <div className='signUp-left'>
-        <img src={LogoIcon} alt='logo' className='logo'/>
         { success ? <p className='success-text'>A letter has been sent to your mail. Please confirm your mail</p> :
         <>
         <div className='title-content'>
@@ -110,6 +110,11 @@ const SignUp = ({setSignUp}) => {
                 title='SIGN UP'
               />
               {failed && error.email ? <div className='data-error'>this mail is already in use</div> : null}
+              <div className='content'>
+                <h2 className='title'>Already have an Account?</h2>
+                <p className='text'>Sign in to access your account</p>
+                <button className='btn' onClick={() => setSignUp(false)}>SIGN IN</button>
+              </div>
             </Form>
           )}
         </Formik> 

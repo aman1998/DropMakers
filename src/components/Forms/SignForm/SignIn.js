@@ -36,8 +36,8 @@ const SignIn = ({setSignUp}) => {
 
   return (
     <section className='signIn'>
+      <img src={Logo} alt='logo' className='logo' />
       <div className='signIn-left'>
-        <img src={Logo} alt='logo' className='logo' />
         <div className='content'>
           <h2 className='title'>Create an account</h2>
           <p className='text'>Register to enter your account</p>
@@ -61,6 +61,11 @@ const SignIn = ({setSignUp}) => {
           />
         <div className='password-forgot'>Forgot password?</div>
         <ButtonApi loading={loading} title='SIGN IN' failed={failed}/>
+        <div className='content'>
+          <h2 className='title'>Create an account</h2>
+          <p className='text'>Register to enter your account</p>
+          <button className='btn' onClick={() => setSignUp(true)}>SIGN UP</button>
+        </div>
       </form>
     </section>
   )

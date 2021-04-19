@@ -10,10 +10,24 @@
     display: flex;
     justify-content: space-between;
     margin-bottom: 72px;
+    @media screen and (max-width: 1199px) {
+      flex-direction: column;
+    }
     .text {
       margin-right: 30px;
       @include fs20;
       line-height: 140%;
+      @media screen and (max-width: 1199px) {
+        margin-bottom: 8px;
+      }
+    }
+  }
+  .photo {
+    @media screen and (max-width: 1199px) {
+      height: 517px;
+    }
+    @media screen and (max-width: 767px) {
+      height: 317px;
     }
   }
 }

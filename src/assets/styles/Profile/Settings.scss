@@ -19,4 +19,136 @@
     margin: 28px 0 8px 0;
     @include fs24;
   }
+  .settings-form {
+    display: flex;
+    justify-content: space-between;
+    padding: 16px 24px 24px 24px;
+    background: $blueLightBg;
+    .data {
+      width: 100%;
+      &-item {
+        display: flex;
+        align-items: center;
+        &-title {
+          margin-right: 16px;
+          width: 180px;
+          height: 40px;
+          @include fs16;
+          color: $darkTextBg;
+        }
+        .input {
+          @include input;
+          margin-bottom: 16px;
+          max-width: 720px;
+          width: 100%;
+        }
+        .select {
+          @include select;
+          margin-bottom: 16px;
+        }
+        .input-wrapper {
+          display: flex;
+          justify-content: space-between;
+          max-width: 720px;
+          width: 100%;
+          .input {
+            width: 50%;
+            &:nth-child(1) {
+              margin-right: 4px;
+            }
+            &:nth-child(2) {
+              margin-left: 4px;
+            }
+          }
+        }
+      }
+      .btn {
+        @include btn;
+        max-width: 916px;
+        width: 100%;
+      }
+    }
+    .avatar {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-left: 8px;
+      width: 150px;
+      &-icon {
+        width: 150px;
+        height: 150px;
+        object-fit: cover;
+      }
+      &-btn {
+        @include btn;
+        margin-top: 4px;
+        width: 96px;
+        // height: 40px;
+      }
+    }
+    .avatar-change {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 150px !important;
+      height: 35px;
+      border-radius: 10px;
+      margin-top: 5px;
+      margin-right: 5px;
+      cursor: pointer;
+    }
+    .avatar-title {
+      margin-top: 8px;
+      color: $darkTextBg;
+    }
+    input[type="file"] {
+      display: none;
+    }
+  }
+  .email-settings, .password-settings {
+    @include flexSpaceBetween;
+    padding: 16px 24px 24px 24px;
+    background: $blueLightBg;
+    color: $darkTextBg;
+    .email-left, .password-left {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      .email-title, .password-title {
+        margin-right: 16px;
+        width: 180px;
+        @include fs16;
+      }
+      .email-input {
+        @include input;
+        max-width: 720px;
+        width: 100%;
+      }
+    }
+    .btn {
+      @include btn;
+      margin-left: 8px;
+      width: 150px;
+    }
+  }
+  .password-settings {
+    .password-left {
+      .input-wrapper {
+        display: flex;
+        justify-content: space-between;
+        max-width: 720px;
+        width: 100%;
+        .input {
+          @include input;
+          width: 50%;
+          &:nth-child(1) {
+            margin-right: 4px;
+          }
+          &:nth-child(2) {
+            margin-left: 4px;
+          }
+        }
+      }
+    }
+  }
 }

@@ -36,6 +36,10 @@
   font-weight: 500;
   font-size: 48px;
   line-height: 59px;
+  @media screen and (max-width: 1199px) {
+    font-size: 38px;
+    line-height: 46px;
+  }
 }
 
 @mixin input {

@@ -1,9 +1,10 @@
 import React from 'react';
 
 import PrivatePageTemplate from '../components/Template/PrivatePageTemplate';
-import { ProfileSettings, ButtonBackPage } from '../components/';
+import { ProfileSettings, ButtonBackPage, PasswordSettings, EmailSettings } from '../components/';
 
 const ProfileSettingsPage = () => {
+
   return (
     <PrivatePageTemplate>
       <section className='container profile-settings'>
@@ -16,6 +17,10 @@ const ProfileSettingsPage = () => {
         </div>
         <h2 className='title-2'>Profile Settings</h2>
         <ProfileSettings />
+        <h2 className='title-2'>Change Email</h2>
+        <EmailSettings />
+        <h2 className='title-2'>Change Password</h2>
+        <PasswordSettings />
       </section>
     </PrivatePageTemplate>
   )

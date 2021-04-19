@@ -7,6 +7,9 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     row-gap: 34px;
+    @media screen and (max-width: 1199px) {
+      grid-template-columns: 1fr;
+    }
     .item {
       display: flex;
       flex-direction: column;
@@ -30,6 +33,10 @@
         font-weight: 300;
         @include fs18;
         line-height: 140%;
+        @media screen and (max-width: 1199px) {
+          max-width: 585px;
+          width: 100%;
+        }
       }
     }
   }

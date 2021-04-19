@@ -20,19 +20,24 @@ const ContactsForm = () => {
       <form className='form' onSubmit={handleForm}>
         <div className='form-data'>
           <div className='data-left'>
-            <label htmlFor='name'>Name</label>
-            <input 
-              id='name' 
-              className='name' 
-              onFocus={() => setError(false)}
-              onChange={(e) => setName(e.target.value)}
-              />
-            <label htmlFor='email'>Email</label>
-            <input 
-              id='email' 
-              type='email' 
-              onFocus={() => setError(false)}
-              onChange={(e) => setEmail(e.target.value)}/>
+            <div className='data-left-label data-left-label--1'>
+              <label htmlFor='name'>Name</label>
+              <input 
+                id='name' 
+                className='name' 
+                onFocus={() => setError(false)}
+                onChange={(e) => setName(e.target.value)}
+                />
+            </div>
+            <div className='data-left-label data-left-label--2'>
+              <label htmlFor='email'>Email</label>
+              <input 
+                id='email' 
+                type='email'
+                className='email' 
+                onFocus={() => setError(false)}
+                onChange={(e) => setEmail(e.target.value)}/>
+            </div>
           </div>
           <div className='data-right'>
             <label htmlFor='massage'>Massage</label>

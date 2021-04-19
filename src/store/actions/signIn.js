@@ -1,6 +1,7 @@
 import {auth} from '../../axios/axios';
 import {SIGN_IN_SUCCESS, SIGN_IN_LOADING, SIGN_IN_FAILED} from '../actionTypes';
 import { checkIsLog } from './profile';
+import { message } from 'antd';
 
 // Sign In
 export const handleSignInActionCreator = (email, password, handleRedirect) => dispatch => {
@@ -14,6 +15,7 @@ export const handleSignInActionCreator = (email, password, handleRedirect) => di
       handleRedirect()
     })
     .catch((e) => {
+      message.error('Неправильный логин или пароль');
       console.log('error', e.message)
       dispatch({type: SIGN_IN_FAILED})
       dispatch(checkIsLog(false))
