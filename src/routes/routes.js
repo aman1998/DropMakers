@@ -1,20 +1,22 @@
+import React from 'react';
+
 // Routes
-export { default as MainPage } from '../pages/MainPage'
-export { default as DashboardPage } from '../pages/DashboardPage'
-export { default as ActivatePage } from '../pages/ActivatePage'
-export { default as SearchPage } from '../pages/SearchPage'
-export { default as NotificationsPage } from '../pages/NotificationsPage'
-export { default as OrdersPage } from '../pages/OrdersPage'
-export { default as OrdersReturnsPage } from '../pages/OrdersReturnsPage'
-export { default as MailPage } from '../pages/MailPage'
-export { default as ProfileSettingsPage } from '../pages/ProfileSettingsPage'
-export { default as PaymentsPage } from '../pages/PaymentsPage'
-export { default as AccessControlPage } from '../pages/AccessControlPage'
-export { default as StorePage } from '../pages/StorePage'
-export { default as InventoryPage } from '../pages/InventoryPage'
-export { default as InventorySettingsPage } from '../pages/InventorySettingsPage'
-export { default as InventoryChangesPage } from '../pages/InventoryChangesPage'
-export { default as InventoryBrandsPage } from '../pages/InventoryBrandsPage'
-export { default as InventoryListsPage } from '../pages/InventoryListsPage'
-export { default as ExporteBayPage } from '../pages/ExporteBayPage'
-export { default as ExportOrdersPage } from '../pages/ExportOrdersPage'
+export const MainPage = React.lazy(() => import('../pages/MainPage'));
+export const DashboardPage = React.lazy(() => import('../pages/DashboardPage'));
+export const ActivatePage = React.lazy(() => import('../pages/ActivatePage'));
+export const SearchPage = React.lazy(() => import('../pages/SearchPage'));
+export const NotificationsPage = React.lazy(() => import('../pages/NotificationsPage'));
+export const OrdersPage = React.lazy(() => import('../pages/OrdersPage'));
+export const OrdersReturnsPage = React.lazy(() => import('../pages/OrdersReturnsPage'));
+export const ProfileSettingsPage = React.lazy(() => import('../pages/ProfileSettingsPage'));
+export const MailPage = React.lazy(() => import('../pages/MailPage'));
+export const PaymentsPage = React.lazy(() => import('../pages/PaymentsPage'));
+export const AccessControlPage = React.lazy(() => import('../pages/AccessControlPage'));
+export const StorePage = React.lazy(() => import('../pages/StorePage'));
+export const InventoryPage = React.lazy(() => import('../pages/InventoryPage'));
+export const InventorySettingsPage = React.lazy(() => import('../pages/InventorySettingsPage'));
+export const InventoryChangesPage = React.lazy(() => import('../pages/InventoryChangesPage'));
+export const InventoryBrandsPage = React.lazy(() => import('../pages/InventoryBrandsPage'));
+export const InventoryListsPage = React.lazy(() => import('../pages/InventoryListsPage'));
+export const ExporteBayPage = React.lazy(() => import('../pages/ExporteBayPage'));
+export const ExportOrdersPage = React.lazy(() => import('../pages/ExportOrdersPage'));
