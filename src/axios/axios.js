@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 export default axios.create({
-  baseURL: 'http://151.248.121.132'
+  baseURL: 'http://151.248.121.132:8920'
 })
 
 export const auth = axios.create({

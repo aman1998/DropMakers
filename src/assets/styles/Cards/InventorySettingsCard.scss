@@ -8,6 +8,7 @@
   padding: 16px;
   background: $blueLightBg;
   color: $darkTextBg;
+  border-radius: 6px;
   .item {
     @include fs16;
     div {

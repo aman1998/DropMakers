@@ -24,5 +24,10 @@
     @include fs16;
     line-height: 150%;
   }
+  .select {
+    @include select;
+    margin: 10px 0;
+  }
 }
+
 

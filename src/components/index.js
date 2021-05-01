@@ -40,6 +40,7 @@ export { default as  OrderCard } from './Cards/OrderCard'
 export { default as MyinventoryCard } from './Cards/MyinventoryCard'
 export { default as InventorySettingsCard } from './Cards/InventorySettingsCard'
 export { default as BrandCard } from './Cards/BrandCard'
+export { default as AccessControlCard } from './Cards/AccessControlCard'
 
 // Forms 
 export { default as SignForm } from './Forms/SignForm/SignForm'
@@ -51,6 +52,9 @@ export { default as SearchMyInventory } from './Forms/SearchForm/SearchMyInvento
 export { default as SearchInventoryChanges } from './Forms/SearchForm/SearchInventoryChanges'
 export { default as SearchLists } from './Forms/SearchForm/SearchLists'
 
+// Modals
+export { default as AccessControlModal } from './Forms/Modal/AccessControlModal'
+
 // Buttons
 export { default as ButtonApi } from './Buttons/ButtonApi'
 export { default as ButtonBackPage } from './Buttons/ButtonBackPage'
@@ -60,9 +64,13 @@ export { default as ProfileNav } from './Profile/Navigation'
 export { default as ProfileSettings } from './Profile/ProfileSettings'
 export { default as EmailSettings } from './Profile/EmailSettings'
 export { default as PasswordSettings } from './Profile/PasswordSettings'
+export { default as AccessControl } from './Profile/AccessControl'
 
 // MailPage
 export { default as Sidebar } from './Mail/Sidebar'
+
+// SearchProductsPage
+export { default as SearchProducts } from './SearchProducts/SearchProducts'
 
 // Stores
 export { default as StoreEbay } from './Store/eBay'

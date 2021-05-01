@@ -5,6 +5,7 @@ import signIn from './signIn';
 import profile from './profile';
 import activate from './activate';
 import themeSwitcher from './themeSwitcher';
+import accessControl from './accessControl';
 
 export default combineReducers({
   signUp,
@@ -12,5 +13,6 @@ export default combineReducers({
   profile,
   results,
   activate,
-  themeSwitcher
+  themeSwitcher,
+  accessControl
 })

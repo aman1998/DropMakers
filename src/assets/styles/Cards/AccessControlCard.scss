@@ -1,0 +1,14 @@
+@import '../Variables.scss';
+@import '../Templates.scss';
+
+.accessControl-card {
+  @include flexSpaceBetween;
+  margin-bottom: 16px;
+  padding: 16px;
+  background: $blueLightBg;
+  color: $darkTextBg;
+  border-radius: 6px;
+  .btn {
+    @include btn;
+  }
+}
