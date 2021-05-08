@@ -26,13 +26,13 @@ const Navigation = () => {
           <NavLink to='/settings' className='dropdown-item' exact>Account Settings</NavLink>
         </div>
         <div className='dropdown-item'> 
-          <NavLink to='/payments' className='dropdown-item' exact>My Payment</NavLink>
+          <NavLink to='/payments' className='dropdown-item' exact>Buy Premium</NavLink>
         </div>
         <div className='dropdown-item'> 
           <NavLink to='/access-control' className='dropdown-item' exact>Access Control</NavLink>
         </div>
         <div className='dropdown-item'> 
-          <button onClick={handleLogout} className='dropdown-item btn'>Log Out</button>
+          <a onClick={handleLogout} className='dropdown-item'>Log Out</a>
         </div>
       </div>
     </nav>

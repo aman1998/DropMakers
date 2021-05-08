@@ -41,7 +41,7 @@ const PasswordSettings = () => {
   }
 
   return (
-    <form className='password-settings' onSubmit={(e) => handlePasswordSettings(e)}>
+    <form className='password-settings' onSubmit={handlePasswordSettings}>
         <div className='password-left'>
           <div className='password-title'>New password</div>
           <div className='input-wrapper'>

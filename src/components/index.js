@@ -15,6 +15,7 @@ export { default as SearchIcon } from './SVG/search'
 export { default as SendIcon } from './SVG/send'
 export { default as SettingsIcon } from './SVG/settings'
 export { default as LogoIcon } from './SVG/logo'
+export { default as MoneyIcon } from './SVG/money'
 
 // MainPage
 export { default as Steps } from './MainPage/Steps'
@@ -54,6 +55,7 @@ export { default as SearchLists } from './Forms/SearchForm/SearchLists'
 
 // Modals
 export { default as AccessControlModal } from './Forms/Modal/AccessControlModal'
+export { default as PaymentPaypalModal } from './Forms/Modal/PaymentPaypalModal'
 
 // Buttons
 export { default as ButtonApi } from './Buttons/ButtonApi'
@@ -65,6 +67,7 @@ export { default as ProfileSettings } from './Profile/ProfileSettings'
 export { default as EmailSettings } from './Profile/EmailSettings'
 export { default as PasswordSettings } from './Profile/PasswordSettings'
 export { default as AccessControl } from './Profile/AccessControl'
+export { default as Payments } from './Profile/Payments'
 
 // MailPage
 export { default as Sidebar } from './Mail/Sidebar'

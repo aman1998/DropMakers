@@ -2,16 +2,58 @@
 @import '../Templates.scss';
 
 .payments {
-  @include flexSpaceBetween;
-  .title {
-    font-size: 30px;
-    line-height: 37px;
+  &-title {
+    @include fs30;
+    text-align: center;
+    margin-bottom: 24px;
+    font-weight: bold;
   }
-  .right {
-    @include flexSpaceBetween;
-    @include fs20;
-    .count {
-      margin-left: 16px;
+  &-price {
+    @include flexCenter;
+    margin-bottom: 60px;
+    font-weight: bold;
+    svg {
+      margin-right: 8px;
+      width: 50px;
+      height: 50px;
+    }
+    p {
+      @include fs36;
+      margin-left: 8px;
+    }
+  }
+  &-choose {
+    @include fs24;
+    text-align: center;
+    margin-bottom: 50px;
+    font-weight: bold;
+  }
+  &-methods {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    row-gap: 20px;
+    column-gap: 20px;
+    .method {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 10px;
+      width: 220px;
+      height: 120px;
+      border: 1px solid #DDE5E9;
+      box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
+      border-radius: 6px;
+      cursor: pointer;
+      transition: all .2s ease-in-out;
+      &:hover {
+        border: 1px solid $yellowBg;
+      }
+      &-icon {
+        margin-bottom: 5px;
+        width: 40px;
+        height: 40px;
+      }
     }
   }
 }

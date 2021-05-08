@@ -2,8 +2,7 @@ import React, {useState} from 'react';
 import { handleAddControlActionCreator } from '../../../store/actions/accessControl';
 import { useDispatch } from 'react-redux';
 
-import { Modal, Select } from 'antd';
-const { Option } = Select;
+import { Modal } from 'antd';
 
 const AccessControlModal = ({isModalVisible, setIsModalVisible, setReload}) => {
   const [performer_email, setPerformerEmail] = useState('')
@@ -33,7 +32,7 @@ const AccessControlModal = ({isModalVisible, setIsModalVisible, setReload}) => {
       >
       <div className='modal-title'>Provide Access</div>
       <div className='modal-text'>Dropmakers user email, that you want to provide access to</div>
-      <form onSubmit={(e) => handleAddAccessControl(e)}>
+      <form onSubmit={handleAddAccessControl}>
         <input 
           placeholder='Email' 
           className='modal-input' 

@@ -6,6 +6,7 @@ import profile from './profile';
 import activate from './activate';
 import themeSwitcher from './themeSwitcher';
 import accessControl from './accessControl';
+import payment from './payment';
 
 export default combineReducers({
   signUp,
@@ -14,5 +15,6 @@ export default combineReducers({
   results,
   activate,
   themeSwitcher,
-  accessControl
+  accessControl,
+  payment
 })

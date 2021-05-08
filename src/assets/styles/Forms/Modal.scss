@@ -10,6 +10,7 @@
   }
   &-text {
     @include fs18;
+    text-align: center
   }
   &-input {
     @include input;
@@ -17,11 +18,30 @@
     margin: 15px 0;
     width: 100%;
   }
+  &-price {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 15px 0;
+    svg {
+      margin-right: 5px
+    }
+    p {
+      @include fs18;
+      margin-left: 5px;
+    }
+  }
   &-btns {
     @include flexSpaceBetween;
     .btn {
       @include btn;
       width: 147px;
+    }
+  }
+  &-btns--payment {
+    justify-content: center;
+    .btn {
+      width: 200px;
     }
   }
 }

@@ -60,7 +60,7 @@ const ProfileSttings = () => {
   }
 
   return (
-    <form className='settings-form' onSubmit={(e) => handleChangeProfile(e)}>
+    <form className='settings-form' onSubmit={handleChangeProfile}>
      <div className='data'>
         {/* <label className='data-item'>
           <div className='data-item-title'>Email</div>
